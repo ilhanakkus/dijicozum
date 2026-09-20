@@ -166,7 +166,7 @@ def index_page():
         faq_ld(INDEX_FAQ),
     ]
     title = "DijiÇözüm | Online Randevu, Sipariş ve Web Sitesi Kurulumu"
-    desc = "Kuaför, restoran, güzellik merkezi ve küçük işletmeler için online randevu, sipariş sistemi, web sitesi ve yapay zeka asistanı. Önce çalışan örneği görün."
+    desc = "Online randevu, sipariş sistemi, web sitesi veya yapay zeka asistanı: ihtiyacınız olanı ayrı ayrı alın. Kuaför, restoran ve küçük işletmeler için."
     out = head(title, desc, "/", ld) + header() + "\n<main>\n"
 
     out += f'''
@@ -174,11 +174,11 @@ def index_page():
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Küçük işletmeler için</span>
-      <h1>Müşterileriniz internetten <em>randevu alsın, sipariş versin.</em></h1>
-      <p class="lead">Sizin yerinize biz kuruyoruz. Satın almadan önce çalışan örneğini görürsünüz.</p>
+      <h1>Hangisine ihtiyacınız varsa <em>sadece onu</em> kuruyoruz.</h1>
+      <p class="lead">Online randevu, sipariş, web sitesi ve yapay zeka asistanı. Her biri ayrı ayrı alınır. İsterseniz birlikte de kurarız.</p>
       <div class="hero-cta">
         <a href="#iletisim" class="btn btn-primary">Ücretsiz demonu iste</a>
-        <a href="#ornekler" class="btn btn-ghost">Örnekleri dene</a>
+        <a href="#hizmetler" class="btn btn-ghost">Hizmetleri gör</a>
       </div>
       <div class="hero-points">
         <span>Önce örnek, sonra karar</span>
@@ -186,24 +186,23 @@ def index_page():
         <span>Türkçe destek</span>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hv-card hv-browser">
-        <div class="hv-bar"><i></i><i></i><i></i></div>
-        <div class="hv-body">
-          <div class="hv-title"></div>
-          <div class="hv-line w80"></div><div class="hv-line w60"></div><div class="hv-line w40"></div>
-          <div class="hv-tiles"><div class="hv-tile"></div><div class="hv-tile"></div><div class="hv-tile"></div></div>
-        </div>
-      </div>
-      <div class="hv-card hv-chat">
-        <div class="bubble in">Yarın 15:00 için yer var mı?</div>
-        <div class="bubble out">Evet, 15:00 ve 16:30 boş. Ayırayım mı?</div>
-        <span class="pill-ok">Yapay zeka asistanı</span>
-      </div>
-      <div class="hv-card hv-phone">
-        <b style="font-size:12px">Randevu al</b>
-        <div class="hv-slot"><b>14:00</b><b class="on">15:00</b><b>16:30</b><b>17:00</b></div>
-      </div>
+    <div class="hero-tiles">
+      <a class="tile-card" href="/randevu-sistemi">
+        <span class="icon-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></span>
+        <b>Randevu sistemi</b><span>Müşteri internetten saat seçer.</span><em>Tek başına alınır</em>
+      </a>
+      <a class="tile-card" href="/siparis-sistemi">
+        <span class="icon-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span>
+        <b>Sipariş sistemi</b><span>QR menü ve online sipariş.</span><em>Tek başına alınır</em>
+      </a>
+      <a class="tile-card" href="/web-sitesi">
+        <span class="icon-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></span>
+        <b>Web sitesi</b><span>Telefonda düzgün açılır, Google'da bulunur.</span><em>Tek başına alınır</em>
+      </a>
+      <a class="tile-card" href="/yapay-zeka-asistani">
+        <span class="icon-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span>
+        <b>Yapay zeka asistanı</b><span>Müşteri sorularını 7/24 cevaplar.</span><em>Tek başına alınır</em>
+      </a>
     </div>
   </div>
 </section>
@@ -213,7 +212,7 @@ def index_page():
   <div class="wrap">
     <div class="section-head">
       <h2>Bunlardan biri size tanıdık geliyor mu?</h2>
-      <p class="lead">Hangisi işinize yarıyorsa ona tıklayın.</p>
+      <p class="lead">Her biri ayrı bir hizmet. Size lazım olana tıklayın.</p>
     </div>
     <div class="grid-2">
 '''
@@ -260,7 +259,7 @@ def index_page():
     <div class="section-head"><h2>Neden bizimle çalışmalısınız?</h2></div>
     <div class="grid-2">
       <div class="card"><h3>Sade ve Türkçe</h3><p>Teknik kelime kullanmayız. Ne aldığınızı anlarsınız.</p></div>
-      <div class="card"><h3>Tek muhatap</h3><p>Site, randevu, sipariş ve asistan tek yerden. Sorunu tek kişiye anlatırsınız.</p></div>
+      <div class="card"><h3>İster biri, ister hepsi</h3><p>Sadece ihtiyacınız olanı alırsınız. Birkaçını isterseniz birlikte kurarız. Muhatabınız hep aynı kişi olur.</p></div>
       <div class="card"><h3>Önce görürsünüz</h3><p>Ödeme yapmadan çalışan örneği denersiniz.</p></div>
       <div class="card"><h3>Baştan yazılı fiyat</h3><p>Ne yapılacağı ve ne kadar tutacağı önceden yazılı olur.</p></div>
     </div>
@@ -291,14 +290,18 @@ def index_page():
         <div class="field"><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx"></div>
         <div class="field"><label for="eposta">E-posta (isteğe bağlı)</label><input id="eposta" name="eposta" type="email" autocomplete="email"></div>
       </div>
-      <div class="field">
-        <label for="hizmet">Ne istiyorsunuz?</label>
-        <select id="hizmet" name="hizmet">
-          <option>Online randevu sistemi</option><option>Sipariş ve QR menü</option><option>Web sitesi</option>
-          <option>Yapay zeka asistanı</option><option>Telefon uygulaması</option><option>Bilmiyorum, önerin</option>
-        </select>
-      </div>
-      <div class="field"><label for="mesaj">Kısaca işinizi anlatın (isteğe bağlı)</label><textarea id="mesaj" name="mesaj" placeholder="Örn. Kuaförüm var, randevuları telefonla alıyorum."></textarea></div>
+      <fieldset class="field pick">
+        <legend>Ne istiyorsunuz? <span>(birden fazla seçebilirsiniz)</span></legend>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="istenen" value="Online randevu sistemi"> Randevu sistemi</label>
+          <label class="opt"><input type="checkbox" name="istenen" value="Sipariş ve QR menü"> Sipariş ve QR menü</label>
+          <label class="opt"><input type="checkbox" name="istenen" value="Web sitesi"> Web sitesi</label>
+          <label class="opt"><input type="checkbox" name="istenen" value="Yapay zeka asistanı"> Yapay zeka asistanı</label>
+          <label class="opt"><input type="checkbox" name="istenen" value="Telefon uygulaması"> Telefon uygulaması</label>
+          <label class="opt"><input type="checkbox" name="istenen" value="Bilmiyorum, önerin"> Bilmiyorum, önerin</label>
+        </div>
+      </fieldset>
+            <div class="field"><label for="mesaj">Kısaca işinizi anlatın (isteğe bağlı)</label><textarea id="mesaj" name="mesaj" placeholder="Örn. Kuaförüm var, randevuları telefonla alıyorum."></textarea></div>
       <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <button class="btn btn-primary" type="submit" id="send-btn">Demomu iste</button>
       <p class="small" id="form-status" role="status">Bilgileriniz yalnızca size dönüş yapmak için kullanılır. <a href="/gizlilik" style="text-decoration:underline">Gizlilik ve KVKK</a></p>
@@ -313,11 +316,12 @@ def index_page():
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 const sendBtn = document.getElementById('send-btn');
+function picked(){ const v = [...form.querySelectorAll('input[name=istenen]:checked')].map(x => x.value); return v.length ? v.join(', ') : 'Bilmiyorum, önerin'; }
 function err(m){ statusEl.style.color = '#b42318'; statusEl.textContent = m; }
 function mailtoFallback(f) {
   const body = ['Ad: ' + f.ad.value, 'Telefon: ' + (f.tel.value || '-'), 'E-posta: ' + (f.eposta.value || '-'),
-    'İstenen: ' + f.hizmet.value, '', f.mesaj.value].join('\\n');
-  location.href = 'mailto:' + SITE.email + '?subject=' + encodeURIComponent('Demo talebi: ' + f.hizmet.value) + '&body=' + encodeURIComponent(body);
+    'İstenen: ' + picked(), '', f.mesaj.value].join('\\n');
+  location.href = 'mailto:' + SITE.email + '?subject=' + encodeURIComponent('Demo talebi: ' + picked()) + '&body=' + encodeURIComponent(body);
 }
 form.addEventListener('submit', async e => {
   e.preventDefault();
@@ -333,9 +337,9 @@ form.addEventListener('submit', async e => {
   try {
     const payload = {
       access_key: SITE.formKey,
-      subject: 'Yeni demo talebi: ' + f.hizmet.value + ' (' + f.ad.value + ')',
+      subject: 'Yeni demo talebi: ' + picked() + ' (' + f.ad.value + ')',
       from_name: SITE.brand + ' Web Sitesi',
-      name: f.ad.value, telefon: f.tel.value || '-', istenen: f.hizmet.value, mesaj: f.mesaj.value || '-'
+      name: f.ad.value, telefon: f.tel.value || '-', istenen: picked(), mesaj: f.mesaj.value || '-'
     };
     if (mail) payload.email = mail;
     const res = await fetch('https://api.web3forms.com/submit', {
@@ -563,6 +567,7 @@ def service_page(slug):
 <section class="sec">
   <div class="wrap">
     <h2>Diğer çözümlerimiz</h2>
+    <p class="lead" style="margin-bottom:18px">Her biri ayrı ayrı alınabilir. İsterseniz birlikte de kurarız.</p>
     <div class="related">''' + "".join(f'<a href="/{r}">{escape(SERVICES[r]["crumb"])}</a>' for r in s["related"]) + f'''</div>
   </div>
 </section>

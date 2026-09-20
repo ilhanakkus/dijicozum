@@ -264,3 +264,31 @@ footer { border-top: 1px solid var(--line); padding: 40px 0; margin-top: 40px; c
 .demo-note { font-size: 14px; color: var(--muted); margin-top: 10px; }
 @media (max-width: 960px) { .steps.three { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
 @media (max-width: 720px) { .cta-band { padding: 28px; } }
+
+/* Ana sayfa: ayrı hizmet kutuları ve seçim listesi */
+.hero-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.tile-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px;
+  display: flex; flex-direction: column; gap: 6px; transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.tile-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--brand); }
+.tile-card .icon-box { margin-bottom: 8px; }
+.tile-card:nth-child(even) .icon-box { background: var(--green-soft); color: var(--green); }
+.tile-card b { font-size: 18px; letter-spacing: -.01em; }
+.tile-card span:not(.icon-box) { font-size: 14.5px; color: var(--muted); line-height: 1.45; }
+.tile-card em {
+  margin-top: auto; padding-top: 8px; font-style: normal; font-size: 12.5px; font-weight: 700; color: var(--green);
+}
+.tile-card em::before { content: "✓ "; }
+fieldset.pick { border: 0; padding: 0; min-inline-size: 0; }
+fieldset.pick legend { font-weight: 700; font-size: 14px; margin-bottom: 8px; padding: 0; }
+fieldset.pick legend span { font-weight: 500; color: var(--muted); }
+.opts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.opt {
+  display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 1.5px solid var(--line);
+  border-radius: 12px; background: #fdfcfa; font-size: 15px; font-weight: 600; cursor: pointer;
+}
+.opt input { width: 20px; height: 20px; accent-color: var(--brand); flex: none; }
+.opt:has(input:checked) { border-color: var(--brand); background: var(--brand-soft); }
+@media (max-width: 960px) { .hero-tiles { max-width: 560px; } }
+@media (max-width: 480px) { .hero-tiles, .opts { grid-template-columns: 1fr; } }
