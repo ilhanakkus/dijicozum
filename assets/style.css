@@ -230,3 +230,37 @@ footer { border-top: 1px solid var(--line); padding: 40px 0; margin-top: 40px; c
   .hv-chat { left: 0; }
   .strip-in { flex-direction: column; }
 }
+
+/* ---- Sade dil, hizmet sayfaları ---- */
+.nav-links { gap: 22px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.problem { display: flex; flex-direction: column; gap: 10px; }
+.problem .q { font-size: 21px; font-weight: 800; line-height: 1.25; letter-spacing: -.02em; }
+.problem p { margin: 0; }
+.steps.three { grid-template-columns: repeat(3, 1fr); }
+.crumbs { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+.crumbs a { text-decoration: underline; }
+.page-hero { padding: 56px 0 24px; }
+.page-hero h1 { font-size: clamp(32px, 5vw, 52px); max-width: 860px; }
+.page-hero .lead { margin: 18px 0 28px; max-width: 700px; }
+.sec { padding: 44px 0; }
+.sec h2 { margin-bottom: 18px; }
+.checks { list-style: none; display: grid; gap: 12px; margin-top: 8px; }
+.checks li { display: flex; gap: 12px; font-size: 17px; }
+.checks li::before { content: "✓"; color: var(--green); font-weight: 800; flex: none; }
+.cta-band {
+  background: var(--navy); color: #fff; border-radius: 28px; padding: 40px;
+  display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+.cta-band h2 { margin: 0; font-size: clamp(24px, 3vw, 32px); color: #fff; }
+.cta-band p { color: #b6bfd0; margin-top: 6px; }
+.related { display: flex; gap: 12px; flex-wrap: wrap; }
+.related a { padding: 12px 20px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); font-weight: 700; }
+.related a:hover { border-color: var(--brand); color: var(--brand-dark); }
+.foot-cols { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 28px; }
+.foot-cols h4 { font-size: 14px; color: var(--ink); margin-bottom: 10px; }
+.foot-cols a { display: block; padding: 3px 0; }
+.foot-cols a:hover { color: var(--brand-dark); }
+.demo-note { font-size: 14px; color: var(--muted); margin-top: 10px; }
+@media (max-width: 960px) { .steps.three { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .cta-band { padding: 28px; } }

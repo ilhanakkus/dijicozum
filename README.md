@@ -7,7 +7,8 @@ Saf statik site: derleme adımı yok, bağımlılık yok. Vercel'de olduğu gibi
 ## Yapı
 
 ```
-index.html            Ana sayfa
+index.html            Ana sayfa (tools/build_pages.py ile üretilir)
+randevu-sistemi.html, siparis-sistemi.html, web-sitesi.html, yapay-zeka-asistani.html   Hizmet sayfaları (aynı betikle üretilir)
 gizlilik.html         Gizlilik ve KVKK aydınlatma metni (yayın öncesi doldurulacak)
 404.html              Bulunamadı sayfası
 demo/
@@ -47,6 +48,14 @@ bash tools/export_pngs.sh PlusJakartaSans-ExtraBold.ttf
 ```
 
 Her demo kendi içinde tamamdır; demo verileri yalnızca ziyaretçinin tarayıcısında (localStorage) tutulur, sunucuya bir şey gönderilmez.
+
+## Sayfaları düzenleme
+
+Ana sayfa ve dört hizmet sayfası `tools/build_pages.py` ile üretilir. Metni, SSS'yi veya menüyü değiştirmek için o dosyayı düzenleyip çalıştırın (menü, alt bilgi, SEO etiketleri, JSON-LD ve `sitemap.xml` otomatik güncellenir):
+
+```bash
+python3 tools/build_pages.py
+```
 
 ## Yerelde çalıştırma
 
