@@ -269,8 +269,9 @@
         </select>
       </div>
       <div class="field"><label for="mesaj">Kısaca ihtiyacınız</label><textarea id="mesaj" name="mesaj" placeholder="Bugün nasıl çalışıyorsunuz, neyi kolaylaştırmak istiyorsunuz?"></textarea></div>
-      <button class="btn btn-primary" type="submit">Talebi gönder</button>
-      <p class="small">Gönder'e bastığınızda e-posta uygulamanız hazır bir taslakla açılır. Bilgileriniz yalnızca size dönüş yapmak için kullanılır.</p>
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <button class="btn btn-primary" type="submit" id="send-btn">Talebi gönder</button>
+      <p class="small" id="form-status" role="status">Bilgileriniz yalnızca size dönüş yapmak için kullanılır. <a href="gizlilik.html" style="text-decoration:underline">Gizlilik ve KVKK</a></p>
     </form>
   </div>
 </section>
@@ -293,15 +294,45 @@
 
   document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
 
-  document.getElementById('contact-form').addEventListener('submit', e => {
+  const form = document.getElementById('contact-form');
+  const statusEl = document.getElementById('form-status');
+  const sendBtn = document.getElementById('send-btn');
+
+  function mailtoFallback(f) {
+    const body = ['Ad: ' + f.ad.value, 'E-posta: ' + f.eposta.value, 'Telefon: ' + (f.tel.value || '-'),
+      'İşletme: ' + (f.isletme.value || '-'), 'İlgilenilen çözüm: ' + f.hizmet.value, '', f.mesaj.value].join('\n');
+    location.href = 'mailto:' + SITE.email + '?subject=' + encodeURIComponent('Demo talebi: ' + f.hizmet.value) + '&body=' + encodeURIComponent(body);
+  }
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const f = e.target;
-    if (!f.ad.value.trim() || !f.eposta.value.trim()) { alert('Lütfen adınızı ve e-posta adresinizi yazın.'); return; }
-    const body = [
-      'Ad: ' + f.ad.value, 'E-posta: ' + f.eposta.value, 'Telefon: ' + (f.tel.value || '-'),
-      'İşletme: ' + (f.isletme.value || '-'), 'İlgilenilen çözüm: ' + f.hizmet.value, '', f.mesaj.value
-    ].join('\n');
-    location.href = 'mailto:' + SITE.email + '?subject=' + encodeURIComponent('Demo talebi: ' + f.hizmet.value) + '&body=' + encodeURIComponent(body);
+    if (!f.ad.value.trim() || !/^\S+@\S+\.\S+$/.test(f.eposta.value.trim())) {
+      statusEl.textContent = 'Lütfen adınızı ve geçerli bir e-posta adresi yazın.'; statusEl.style.color = '#b42318'; return;
+    }
+    if (!SITE.formKey) { mailtoFallback(f); return; }
+    if (f.botcheck.checked) return;
+    sendBtn.disabled = true; sendBtn.textContent = 'Gönderiliyor…'; statusEl.style.color = ''; statusEl.textContent = '';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: SITE.formKey,
+          subject: 'Yeni demo talebi: ' + f.hizmet.value + ' (' + f.ad.value + ')',
+          from_name: SITE.brand + ' Web Sitesi',
+          name: f.ad.value, email: f.eposta.value, telefon: f.tel.value || '-',
+          isletme: f.isletme.value || '-', cozum: f.hizmet.value, mesaj: f.mesaj.value || '-'
+        })
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message || 'gönderilemedi');
+      form.innerHTML = '<div style="text-align:center;padding:36px 12px"><div style="font-size:44px">✅</div><h3 style="margin:10px 0 6px">Talebiniz bize ulaştı</h3><p class="small" style="font-size:15px">Genellikle bir iş günü içinde e-posta ile dönüş yapıyoruz. Teşekkürler!</p></div>';
+    } catch (err) {
+      sendBtn.disabled = false; sendBtn.textContent = 'Talebi gönder';
+      statusEl.style.color = '#b42318';
+      statusEl.innerHTML = 'Gönderilemedi. Lütfen tekrar deneyin ya da doğrudan <a href="mailto:' + SITE.email + '" style="text-decoration:underline">' + SITE.email + '</a> adresine yazın.';
+    }
   });
 </script>
 </body>

@@ -4,4 +4,7 @@ window.SITE = {
   brand: "DijiÇözüm",
   email: "merhaba@dijicozum.com",
   domain: "dijicozum.com",
+  // Web3Forms erişim anahtarı (web3forms.com). Herkese açık olması güvenlidir.
+  // Boşsa form, ziyaretçinin e-posta programını açan eski yönteme döner.
+  formKey: "",
 };
