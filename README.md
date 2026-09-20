@@ -37,7 +37,14 @@ python3 -m http.server 4173
 1. **GitHub:** repoyu oluşturup `main` dalına gönderin (`git push`).
 2. **Vercel:** vercel.com → Add New → Project → GitHub reposunu seçin. Framework: **Other**, Build Command ve Output Directory boş kalsın. Deploy.
 3. **Alan adı:** Vercel → Project → Settings → Domains → `dijicozum.com` ve `www.dijicozum.com` ekleyin. Vercel size DNS kayıtlarını gösterir.
-4. **DNS (Turkticaret):** alan adı panelinde DNS yönetimine girin, Vercel'in gösterdiği kayıtları ekleyin (genellikle kök alan için `A 76.76.21.21`, `www` için `CNAME cname.vercel-dns.com`; Vercel'in ekranındaki değerler geçerlidir). Yayılması dakikalar ile birkaç saat sürebilir.
+4. **DNS (Turkticaret → DNS yönetimi):** mevcut park sayfası kayıtlarını (`A 31.186.11.254` ve www için `CNAME dijicozum.com`) silin, şunları ekleyin:
+
+   | Tür | Ad | Değer |
+   |---|---|---|
+   | A | `@` (boş) | `216.198.79.1` |
+   | CNAME | `www` | `91dda51a3d2ea529.vercel-dns-017.com` |
+
+   Alternatif eski değerler de çalışır: `A 76.76.21.21` ve `CNAME cname.vercel-dns.com`. Güncel değerler için Vercel → Project → Settings → Domains ekranına bakın. `www.dijicozum.com`, kalıcı yönlendirmeyle (308) `dijicozum.com`'a gider. Yayılması dakikalar ile birkaç saat sürebilir.
 5. Bundan sonra `main` dalına yapılan her `git push` otomatik yayına alınır. Pull request'ler için önizleme adresi üretilir.
 
 ## Yayın öncesi kontrol listesi
