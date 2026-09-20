@@ -6,5 +6,5 @@ window.SITE = {
   domain: "dijicozum.com",
   // Web3Forms erişim anahtarı (web3forms.com). Herkese açık olması güvenlidir.
   // Boşsa form, ziyaretçinin e-posta programını açan eski yönteme döner.
-  formKey: "",
+  formKey: "5a47d6cd-4ce2-475e-8cf8-de962685110e",
 };
