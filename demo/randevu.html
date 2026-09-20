@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo: Randevu Sistemi | Usta Makas Kuaför</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="../assets/demo.css">
+<style>
+  :root { --bg:#f6f2ea; --ink:#1c1c1e; --gold:#b98a2c; --gold-soft:#f5ead2; --line:#e3dccd; --card:#fff; --muted:#6b675e; --ok:#0e7c66; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Plus Jakarta Sans",system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.5; }
+  button { font:inherit; cursor:pointer; }
+  .top { background:var(--ink); color:#fff; padding:22px 16px 0; }
+  .top-in { max-width:960px; margin:0 auto; }
+  .brand { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .brand-mark { width:42px; height:42px; border-radius:50%; background:var(--gold); display:grid; place-items:center; font-weight:800; color:#1c1c1e; font-size:20px; }
+  .brand h1 { font-size:20px; letter-spacing:-.01em; }
+  .brand p { font-size:13px; color:#b9b4a8; }
+  .tabs { display:flex; gap:4px; }
+  .tab { background:transparent; border:0; color:#b9b4a8; padding:12px 18px; font-weight:700; font-size:15px; border-radius:12px 12px 0 0; }
+  .tab.on { background:var(--bg); color:var(--ink); }
+  main { max-width:960px; margin:0 auto; padding:28px 16px 64px; }
+  .hint { background:var(--gold-soft); border:1px solid #ecd9a8; padding:12px 16px; border-radius:12px; font-size:14px; margin-bottom:22px; }
+  .layout { display:grid; grid-template-columns:1fr 300px; gap:24px; align-items:start; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px; }
+  .stepper { display:flex; gap:8px; margin-bottom:22px; font-size:13px; font-weight:700; color:var(--muted); flex-wrap:wrap; }
+  .stepper span { padding:5px 12px; border-radius:999px; background:#efe9dc; }
+  .stepper span.on { background:var(--ink); color:#fff; }
+  .stepper span.done { background:var(--gold-soft); color:var(--gold); }
+  h2 { font-size:22px; margin-bottom:16px; letter-spacing:-.01em; }
+  .opts { display:grid; gap:10px; }
+  .opt { display:flex; justify-content:space-between; align-items:center; gap:12px; text-align:left; background:#fff; border:2px solid var(--line); border-radius:14px; padding:14px 16px; transition:border-color .15s, background .15s; }
+  .opt:hover { border-color:var(--gold); }
+  .opt.sel { border-color:var(--gold); background:var(--gold-soft); }
+  .opt b { display:block; font-size:16px; } .opt small { color:var(--muted); }
+  .price { font-weight:800; }
+  .days { display:flex; gap:8px; overflow-x:auto; padding-bottom:6px; margin-bottom:18px; }
+  .day { flex:none; min-width:74px; border:2px solid var(--line); background:#fff; border-radius:14px; padding:10px 8px; text-align:center; }
+  .day small { display:block; color:var(--muted); font-size:12px; text-transform:capitalize; }
+  .day b { font-size:20px; }
+  .day.sel { border-color:var(--gold); background:var(--gold-soft); }
+  .slots { display:grid; grid-template-columns:repeat(auto-fill,minmax(84px,1fr)); gap:8px; }
+  .slot { padding:11px 0; border-radius:12px; border:2px solid var(--line); background:#fff; font-weight:700; }
+  .slot:hover:not(:disabled) { border-color:var(--gold); }
+  .slot.sel { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .slot:disabled { background:#f0ece3; color:#b7b1a3; text-decoration:line-through; cursor:not-allowed; }
+  .field { display:grid; gap:6px; margin-bottom:14px; }
+  .field label { font-weight:700; font-size:14px; }
+  .field input { font:inherit; padding:12px 14px; border-radius:12px; border:2px solid var(--line); }
+  .field input:focus { outline:none; border-color:var(--gold); }
+  .actions { display:flex; justify-content:space-between; gap:10px; margin-top:22px; }
+  .btn { border:0; border-radius:999px; padding:13px 26px; font-weight:800; }
+  .btn-main { background:var(--gold); color:#1c1c1e; }
+  .btn-main:disabled { background:#ddd6c6; color:#9b9586; cursor:not-allowed; }
+  .btn-line { background:transparent; border:2px solid var(--line); }
+  .summary h3 { font-size:15px; margin-bottom:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+  .sum-row { display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px dashed var(--line); font-size:15px; gap:10px; }
+  .sum-row span:first-child { color:var(--muted); }
+  .sum-total { display:flex; justify-content:space-between; padding-top:14px; font-weight:800; font-size:18px; }
+  .success { text-align:center; padding:12px 0; }
+  .success .tick { width:72px; height:72px; margin:0 auto 16px; border-radius:50%; background:#e3f4ef; color:var(--ok); display:grid; place-items:center; font-size:36px; }
+  .sms { margin:22px auto 0; max-width:340px; text-align:left; background:#f1f1f3; border-radius:18px; padding:14px 16px; font-size:14px; }
+  .sms small { color:var(--muted); display:block; margin-bottom:6px; }
+  /* panel */
+  .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:20px; }
+  .stat { background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; }
+  .stat b { font-size:30px; display:block; letter-spacing:-.02em; }
+  .stat span { color:var(--muted); font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:15px; }
+  th { text-align:left; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); padding:10px 8px; border-bottom:2px solid var(--line); }
+  td { padding:13px 8px; border-bottom:1px solid var(--line); vertical-align:middle; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:999px; font-size:12px; font-weight:700; background:var(--gold-soft); color:var(--gold); }
+  .badge.ok { background:#e3f4ef; color:var(--ok); } .badge.no { background:#fde8e8; color:#b42318; }
+  .mini-btn { border:1.5px solid var(--line); background:#fff; border-radius:8px; padding:5px 10px; font-size:12.5px; font-weight:700; margin-right:4px; }
+  .mini-btn:hover { border-color:var(--gold); }
+  .empty { text-align:center; color:var(--muted); padding:30px 0; }
+  .scroll-x { overflow-x:auto; }
+  .reset { margin-top:16px; font-size:13px; color:var(--muted); background:none; border:0; text-decoration:underline; }
+  @media (max-width:820px) { .layout { grid-template-columns:1fr; } .stats { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div><h1>Usta Makas Erkek Kuaförü</h1><p>Kadıköy, İstanbul · Salı–Cumartesi 10:00–19:00</p></div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab on" data-view="musteri">Müşteri görünümü</button>
+      <button class="tab" data-view="panel">İşletme paneli</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- MÜŞTERİ -->
+  <section id="musteri">
+    <div class="hint"><strong>Deneyin:</strong> bir randevu oluşturun, sonra "İşletme paneli" sekmesine geçin. Randevunuz orada anında görünür.</div>
+    <div class="layout">
+      <div class="card" id="flow"></div>
+      <aside class="card summary" id="summary"></aside>
+    </div>
+  </section>
+
+  <!-- PANEL -->
+  <section id="panel" hidden>
+    <div class="hint">Bu, işletme sahibinin gördüğü panel. Randevuları yönetir, iptal eder, gün sonu özetini görür.</div>
+    <div class="stats" id="stats"></div>
+    <div class="card scroll-x">
+      <h2>Yaklaşan randevular</h2>
+      <div id="table"></div>
+      <button class="reset" id="reset">Demo verilerini sıfırla</button>
+    </div>
+  </section>
+</main>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/demo.js"></script>
+<script>
+const SERVICES = [
+  { id:'sac',   ad:'Saç kesimi',        sure:'30 dk', fiyat:400 },
+  { id:'sakal', ad:'Sakal tıraşı',      sure:'20 dk', fiyat:250 },
+  { id:'kombo', ad:'Saç + sakal',       sure:'50 dk', fiyat:600 },
+  { id:'cocuk', ad:'Çocuk saç kesimi',  sure:'25 dk', fiyat:300 },
+];
+const STAFF = [ { id:'kemal', ad:'Kemal Usta' }, { id:'ozan', ad:'Ozan' }, { id:'any', ad:'Fark etmez' } ];
+const TIMES = []; for (let h=10; h<19; h++) { TIMES.push(pad(h)+':00'); TIMES.push(pad(h)+':30'); }
+function pad(n){ return String(n).padStart(2,'0'); }
+const TL = n => '₺' + n.toLocaleString('tr-TR');
+const KEY = 'demo_randevu_v1';
+
+// Açık günler: bugünden itibaren 7 gün (Pazar ve Pazartesi kapalı)
+const DAYS = []; { const d = new Date(); d.setHours(0,0,0,0); while (DAYS.length < 7) { if (![0,1].includes(d.getDay())) DAYS.push(new Date(d)); d.setDate(d.getDate()+1); } }
+const dkey = d => d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const dlabel = d => d.toLocaleDateString('tr-TR',{weekday:'long',day:'numeric',month:'long'});
+
+function seed() {
+  const t = DAYS[0], t2 = DAYS[1];
+  return [
+    { id:1, ad:'Mehmet K.', tel:'0532 111 22 33', hizmet:'Saç + sakal', fiyat:600, gun:dkey(t),  saat:'11:00', usta:'kemal', durum:'Onaylı' },
+    { id:2, ad:'Burak Y.',  tel:'0533 444 55 66', hizmet:'Saç kesimi',  fiyat:400, gun:dkey(t),  saat:'14:30', usta:'ozan',  durum:'Onaylı' },
+    { id:3, ad:'Emre A.',   tel:'0541 777 88 99', hizmet:'Sakal tıraşı',fiyat:250, gun:dkey(t2), saat:'12:00', usta:'kemal', durum:'Onaylı' },
+  ];
+}
+function load() { try { const v = JSON.parse(localStorage.getItem(KEY)); if (v) return v; } catch(e){} return seed(); }
+function save(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch(e){} }
+let bookings = load();
+
+// Deterministik "dolu" saatler
+function busyFake(dayIdx, staffId, ti) { const s = staffId==='kemal'?3:5; return (dayIdx*7 + ti*13 + s) % 4 === 0; }
+function isFree(day, dayIdx, staff, time, ti) {
+  const taken = (sid) => bookings.some(b => b.gun===dkey(day) && b.saat===time && b.usta===sid && b.durum!=='İptal') || busyFake(dayIdx, sid, ti);
+  if (staff === 'any') return !(taken('kemal') && taken('ozan'));
+  return !taken(staff);
+}
+function pickStaff(day, dayIdx, time, ti) {
+  const taken = (sid) => bookings.some(b => b.gun===dkey(day) && b.saat===time && b.usta===sid && b.durum!=='İptal') || busyFake(dayIdx, sid, ti);
+  return !taken('kemal') ? 'kemal' : 'ozan';
+}
+const staffName = id => (STAFF.find(s=>s.id===id)||{}).ad;
+
+let st = { step:1, hizmet:null, usta:null, dayIdx:0, saat:null, ad:'', tel:'', done:null };
+
+const flow = document.getElementById('flow'), summary = document.getElementById('summary');
+const STEPS = ['Hizmet','Usta','Tarih ve saat','Bilgileriniz'];
+
+function stepper() {
+  return '<div class="stepper">' + STEPS.map((s,i)=>'<span class="'+(st.step===i+1?'on':st.step>i+1?'done':'')+'">'+(i+1)+'. '+s+'</span>').join('') + '</div>';
+}
+function render() {
+  if (st.done) { renderDone(); renderSummary(); return; }
+  let h = stepper();
+  if (st.step===1) {
+    h += '<h2>Hangi hizmeti istersiniz?</h2><div class="opts">' + SERVICES.map(s =>
+      '<button class="opt '+(st.hizmet===s.id?'sel':'')+'" data-s="'+s.id+'"><span><b>'+s.ad+'</b><small>'+s.sure+'</small></span><span class="price">'+TL(s.fiyat)+'</span></button>').join('') + '</div>';
+    h += '<div class="actions"><span></span><button class="btn btn-main" data-next '+(st.hizmet?'':'disabled')+'>Devam</button></div>';
+  }
+  if (st.step===2) {
+    h += '<h2>Kimden randevu almak istersiniz?</h2><div class="opts">' + STAFF.map(s =>
+      '<button class="opt '+(st.usta===s.id?'sel':'')+'" data-u="'+s.id+'"><span><b>'+s.ad+'</b><small>'+(s.id==='any'?'En erken boş saati bulalım':'Deneyim: '+(s.id==='kemal'?'18':'6')+' yıl')+'</small></span></button>').join('') + '</div>';
+    h += '<div class="actions"><button class="btn btn-line" data-back>Geri</button><button class="btn btn-main" data-next '+(st.usta?'':'disabled')+'>Devam</button></div>';
+  }
+  if (st.step===3) {
+    const day = DAYS[st.dayIdx];
+    h += '<h2>Ne zaman uygun?</h2><div class="days">' + DAYS.map((d,i)=>
+      '<button class="day '+(i===st.dayIdx?'sel':'')+'" data-d="'+i+'"><small>'+d.toLocaleDateString('tr-TR',{weekday:'short'})+'</small><b>'+d.getDate()+'</b><small>'+d.toLocaleDateString('tr-TR',{month:'short'})+'</small></button>').join('') + '</div>';
+    h += '<div class="slots">' + TIMES.map((t,ti)=> {
+      const free = isFree(day, st.dayIdx, st.usta, t, ti);
+      return '<button class="slot '+(st.saat===t?'sel':'')+'" data-t="'+t+'" data-ti="'+ti+'" '+(free?'':'disabled')+'>'+t+'</button>'; }).join('') + '</div>';
+    h += '<div class="actions"><button class="btn btn-line" data-back>Geri</button><button class="btn btn-main" data-next '+(st.saat?'':'disabled')+'>Devam</button></div>';
+  }
+  if (st.step===4) {
+    h += '<h2>Son adım: iletişim bilgileriniz</h2>' +
+      '<div class="field"><label for="ad">Adınız Soyadınız</label><input id="ad" value="'+esc(st.ad)+'" autocomplete="name"></div>' +
+      '<div class="field"><label for="tel">Cep telefonu</label><input id="tel" value="'+esc(st.tel)+'" inputmode="tel" placeholder="05xx xxx xx xx" autocomplete="tel"></div>' +
+      '<p style="font-size:13px;color:var(--muted)">Randevu hatırlatması SMS ile gönderilir. Bilgileriniz yalnızca randevu için kullanılır (KVKK).</p>' +
+      '<div class="actions"><button class="btn btn-line" data-back>Geri</button><button class="btn btn-main" id="confirm">Randevuyu onayla</button></div>';
+  }
+  flow.innerHTML = h;
+  renderSummary();
+}
+function esc(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function renderSummary() {
+  const s = SERVICES.find(x=>x.id===st.hizmet);
+  const rows = [
+    ['Hizmet', s?s.ad:'-'], ['Usta', st.usta?staffName(st.usta):'-'],
+    ['Tarih', st.saat ? dlabel(DAYS[st.dayIdx]) : '-'], ['Saat', st.saat || '-'],
+  ];
+  summary.innerHTML = '<h3>Randevu özeti</h3>' + rows.map(r=>'<div class="sum-row"><span>'+r[0]+'</span><span>'+r[1]+'</span></div>').join('') +
+    '<div class="sum-total"><span>Tutar</span><span>'+(s?TL(s.fiyat):'-')+'</span></div><p style="font-size:12.5px;color:var(--muted);margin-top:10px">Ödeme salonda yapılır. İptal ve değişiklik SMS ile mümkün.</p>';
+}
+function renderDone() {
+  const b = st.done;
+  flow.innerHTML = '<div class="success"><div class="tick">✓</div><h2>Randevunuz oluşturuldu</h2>' +
+    '<p>'+esc(b.ad)+', <strong>'+dlabel(new Date(b.gun+'T00:00'))+' saat '+b.saat+'</strong> için '+esc(b.hizmet)+' randevunuz onaylandı.</p>' +
+    '<div class="sms"><small>SMS · şimdi</small>Merhaba '+esc(b.ad.split(' ')[0])+', Usta Makas randevunuz onaylandı: '+dlabel(new Date(b.gun+'T00:00'))+' '+b.saat+' ('+staffName(b.usta)+'). Değişiklik için yanıtlayın.</div>' +
+    '<div class="actions" style="justify-content:center"><button class="btn btn-line" id="again">Yeni randevu</button><button class="btn btn-main" id="topanel">İşletme panelinde gör</button></div></div>';
+}
+
+flow.addEventListener('click', e => {
+  const t = e.target.closest('button'); if (!t) return;
+  if (t.dataset.s) st.hizmet = t.dataset.s;
+  else if (t.dataset.u) st.usta = t.dataset.u;
+  else if (t.dataset.d) { st.dayIdx = +t.dataset.d; st.saat = null; }
+  else if (t.dataset.t) { st.saat = t.dataset.t; st.ti = +t.dataset.ti; }
+  else if ('next' in t.dataset) st.step++;
+  else if ('back' in t.dataset) st.step--;
+  else if (t.id==='confirm') return confirmBooking();
+  else if (t.id==='again') { st = { step:1, hizmet:null, usta:null, dayIdx:0, saat:null, ad:'', tel:'', done:null }; }
+  else if (t.id==='topanel') return show('panel');
+  if (st.step===4) { /* korunacak alanlar */ }
+  render();
+});
+flow.addEventListener('input', e => { if (e.target.id==='ad') st.ad = e.target.value; if (e.target.id==='tel') st.tel = e.target.value; });
+
+function confirmBooking() {
+  st.ad = (document.getElementById('ad').value||'').trim(); st.tel = (document.getElementById('tel').value||'').trim();
+  if (!st.ad || st.tel.replace(/\D/g,'').length < 10) { alert('Lütfen adınızı ve geçerli bir cep telefonu yazın.'); return; }
+  const day = DAYS[st.dayIdx], s = SERVICES.find(x=>x.id===st.hizmet);
+  const usta = st.usta==='any' ? pickStaff(day, st.dayIdx, st.saat, st.ti) : st.usta;
+  const b = { id:Date.now(), ad:st.ad, tel:st.tel, hizmet:s.ad, fiyat:s.fiyat, gun:dkey(day), saat:st.saat, usta, durum:'Yeni' };
+  bookings.push(b); save(bookings); st.done = b; render();
+}
+
+// PANEL
+function renderPanel() {
+  const today = dkey(DAYS[0]);
+  const active = bookings.filter(b=>b.durum!=='İptal');
+  const todays = active.filter(b=>b.gun===today);
+  const pre = today===dkey(new Date()) ? 'Bugünkü' : 'Sıradaki açık günün';
+  document.getElementById('stats').innerHTML =
+    '<div class="stat"><b>'+todays.length+'</b><span>'+pre+' randevusu</span></div>' +
+    '<div class="stat"><b>'+TL(todays.reduce((a,b)=>a+b.fiyat,0))+'</b><span>'+pre+' tahmini cirosu</span></div>' +
+    '<div class="stat"><b>'+active.length+'</b><span>Toplam aktif randevu</span></div>';
+  const list = [...bookings].sort((a,b)=> (a.gun+a.saat).localeCompare(b.gun+b.saat));
+  document.getElementById('table').innerHTML = list.length ? '<table><thead><tr><th>Tarih</th><th>Saat</th><th>Müşteri</th><th>Hizmet</th><th>Usta</th><th>Durum</th><th></th></tr></thead><tbody>' +
+    list.map(b=>'<tr><td>'+dlabel(new Date(b.gun+'T00:00'))+'</td><td><b>'+b.saat+'</b></td><td>'+esc(b.ad)+'<br><small style="color:var(--muted)">'+esc(b.tel)+'</small></td><td>'+esc(b.hizmet)+'</td><td>'+staffName(b.usta)+'</td>' +
+      '<td><span class="badge '+(b.durum==='İptal'?'no':b.durum==='Onaylı'?'ok':'')+'">'+b.durum+'</span></td>' +
+      '<td>'+(b.durum==='İptal'?'':'<button class="mini-btn" data-ok="'+b.id+'">Onayla</button><button class="mini-btn" data-cancel="'+b.id+'">İptal</button>')+'</td></tr>').join('') + '</tbody></table>'
+    : '<div class="empty">Henüz randevu yok.</div>';
+}
+document.getElementById('table').addEventListener('click', e => {
+  const t = e.target.closest('button'); if (!t) return;
+  const id = +(t.dataset.ok || t.dataset.cancel); const b = bookings.find(x=>x.id===id); if (!b) return;
+  b.durum = t.dataset.ok ? 'Onaylı' : 'İptal'; save(bookings); renderPanel();
+});
+document.getElementById('reset').addEventListener('click', () => { bookings = seed(); save(bookings); renderPanel(); });
+
+function show(view) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on', t.dataset.view===view));
+  document.getElementById('musteri').hidden = view!=='musteri';
+  document.getElementById('panel').hidden = view!=='panel';
+  if (view==='panel') renderPanel(); else render();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>show(t.dataset.view)));
+render();
+</script>
+</body>
+</html>

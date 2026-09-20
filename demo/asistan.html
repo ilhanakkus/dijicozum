@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo: Yapay Zeka Asistanı | Yeşil Yaprak Diş Kliniği</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="../assets/demo.css">
+<style>
+  :root { --bg:#eef6f3; --ink:#12332b; --g:#0e7c66; --g-dark:#0a5e4d; --g-soft:#dcefe9; --line:#d3e5df; --muted:#5d7a72; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Plus Jakarta Sans",system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.5; }
+  button { font:inherit; cursor:pointer; }
+  header.site { background:#fff; border-bottom:1px solid var(--line); }
+  .site-in { max-width:1080px; margin:0 auto; padding:14px 16px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .lg { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; }
+  .lg i { width:34px; height:34px; border-radius:10px; background:var(--g); display:grid; place-items:center; font-style:normal; }
+  .site-in nav { display:flex; gap:20px; font-weight:600; color:var(--muted); font-size:14.5px; }
+  .wrap { max-width:1080px; margin:0 auto; padding:24px 16px 60px; }
+  .note { background:#fff8e1; border:1px solid #f0dc9a; border-radius:12px; padding:12px 16px; font-size:13.5px; margin-bottom:20px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start; }
+  .panel { background:#fff; border:1px solid var(--line); border-radius:20px; overflow:hidden; }
+  .panel-h { padding:14px 18px; font-weight:800; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+  .panel-h small { font-weight:600; color:var(--muted); }
+  /* Sohbet */
+  .chat { display:flex; flex-direction:column; height:600px; }
+  .chat-h { background:var(--g); color:#fff; padding:14px 18px; display:flex; align-items:center; gap:12px; }
+  .av { width:40px; height:40px; border-radius:50%; background:#fff; color:var(--g); display:grid; place-items:center; font-weight:800; }
+  .chat-h b { display:block; } .chat-h small { opacity:.85; font-size:12.5px; }
+  .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#7dffc4; margin-right:5px; }
+  .msgs { flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:10px; background:#f7fbf9; }
+  .m { max-width:82%; padding:10px 14px; border-radius:16px; font-size:15px; white-space:pre-line; }
+  .m.bot { background:#fff; border:1px solid var(--line); border-bottom-left-radius:4px; align-self:flex-start; }
+  .m.me { background:var(--g); color:#fff; border-bottom-right-radius:4px; align-self:flex-end; }
+  .typing { display:flex; gap:4px; padding:12px 14px; }
+  .typing i { width:7px; height:7px; border-radius:50%; background:#9bb9b0; animation:b 1s infinite; }
+  .typing i:nth-child(2){animation-delay:.15s} .typing i:nth-child(3){animation-delay:.3s}
+  @keyframes b { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; padding:10px 16px 0; background:#f7fbf9; }
+  .chips button { border:1.5px solid var(--g); color:var(--g-dark); background:#fff; border-radius:999px; padding:6px 13px; font-weight:700; font-size:13px; }
+  .chips button:hover { background:var(--g-soft); }
+  form.in { display:flex; gap:8px; padding:12px 14px; border-top:1px solid var(--line); background:#fff; }
+  form.in input { flex:1; font:inherit; border:2px solid var(--line); border-radius:999px; padding:11px 16px; }
+  form.in input:focus { outline:none; border-color:var(--g); }
+  form.in button { border:0; background:var(--g); color:#fff; border-radius:999px; padding:0 20px; font-weight:800; }
+  /* Sağ panel */
+  .side { display:grid; gap:22px; }
+  .kb { list-style:none; padding:6px 10px 12px; }
+  .kb li { display:flex; gap:10px; padding:9px 8px; border-radius:10px; font-size:14px; transition:background .3s; }
+  .kb li b { min-width:118px; color:var(--g-dark); }
+  .kb li.hit { background:#fff3c4; }
+  .leads { padding:6px 14px 14px; }
+  .lead { border:1px solid var(--line); border-radius:14px; padding:12px 14px; margin-top:10px; font-size:14px; background:#fbfefd; animation:pop .35s; }
+  .lead b { display:block; }
+  .lead span { color:var(--muted); }
+  .empty { color:var(--muted); font-size:14px; padding:14px 4px; }
+  @keyframes pop { from { transform:scale(.96); opacity:0; } }
+  @media (max-width:860px) { .grid { grid-template-columns:1fr; } .site-in nav { display:none; } }
+</style>
+</head>
+<body>
+
+<header class="site"><div class="site-in">
+  <div class="lg"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2c4 0 8 3 8 7 0 3-1 5-2 8s-1 5-3 5-2-3-3-5-1-3-2-3-1 1-2 3-1 5-3 5-3-2-3-5-2-5-2-8c0-4 4-7 8-7z" opacity=".95"/></svg></i>Yeşil Yaprak Diş Kliniği</div>
+  <nav><span>Tedaviler</span><span>Ekibimiz</span><span>Randevu</span><span>İletişim</span></nav>
+</div></header>
+
+<div class="wrap">
+  <div class="note"><strong>Şeffaflık notu:</strong> Bu demoda cevaplar önceden tanımlanmıştır ki nasıl çalıştığını internetsiz de görebilesiniz. Gerçek kurulumda asistan bir yapay zeka modeliyle, işletmenizin onayladığı bilgi tabanından, serbest cümlelerle cevap verir. Sağdaki panel işletme sahibinin gördüğü tarafı gösterir.</div>
+
+  <div class="grid">
+    <div class="panel chat">
+      <div class="chat-h"><div class="av">YY</div><div><b>Yaprak · Sanal asistan</b><small><span class="dot"></span>7/24 çevrimiçi</small></div></div>
+      <div class="msgs" id="msgs" aria-live="polite"></div>
+      <div class="chips" id="chips"></div>
+      <form class="in" id="form"><input id="q" placeholder="Sorunuzu yazın…" autocomplete="off"><button>Gönder</button></form>
+    </div>
+
+    <div class="side">
+      <div class="panel">
+        <div class="panel-h">Asistanın bilgi tabanı <small>işletme sahibi düzenler</small></div>
+        <ul class="kb" id="kb"></ul>
+      </div>
+      <div class="panel">
+        <div class="panel-h">Toplanan talepler <small id="lc">0 talep</small></div>
+        <div class="leads" id="leads"><div class="empty">Asistana "randevu almak istiyorum" yazın. Talep buraya düşer, ekibinize e-posta/WhatsApp ile iletilir.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/demo.js"></script>
+<script>
+const KB = [
+  { k:'saat',   t:'Çalışma saatleri', v:'Pzt–Cmt 09:00–19:00, Pazar kapalı' },
+  { k:'adres',  t:'Adres',            v:'Moda Cad. No:24/3 Kadıköy, İstanbul' },
+  { k:'fiyat',  t:'Fiyat aralıkları', v:'Muayene ücretsiz, tedaviler örnek fiyatlı' },
+  { k:'sgk',    t:'SGK / sigorta',    v:'Anlaşmalı özel sigortalar, SGK yok' },
+  { k:'odeme',  t:'Ödeme',            v:'Nakit, kart, 6 taksit' },
+  { k:'randevu',t:'Randevu',          v:'Asistan talebi toplar, ekip onaylar' },
+];
+const PRICES = { implant:'Implant: 18.000–24.000 ₺ (marka ve cerrahi dahil)', kanal:'Kanal tedavisi: 2.500–4.000 ₺ (dişe göre)', dolgu:'Dolgu: 1.200–2.000 ₺', beyazlatma:'Ofis tipi beyazlatma: 5.000 ₺', temizlik:'Diş taşı temizliği: 1.500 ₺', ortodonti:'Şeffaf plak / tel tedavisi: muayene sonrası plana göre belirlenir' };
+const norm = s => s.toLocaleLowerCase('tr-TR').replace(/[ıİ]/g,'i').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ö/g,'o').replace(/ş/g,'s').replace(/ü/g,'u');
+const has = (t, arr) => arr.some(w => t.includes(w));
+const esc = s => String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const msgs = document.getElementById('msgs'), chips = document.getElementById('chips');
+let flow = null, leads = [], busy = false;
+
+function kbRender(hit) {
+  document.getElementById('kb').innerHTML = KB.map(x=>'<li class="'+(x.k===hit?'hit':'')+'"><b>'+x.t+'</b><span>'+x.v+'</span></li>').join('');
+}
+function add(text, who) {
+  const d = document.createElement('div'); d.className = 'm ' + who; d.textContent = text; msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+}
+function reply(text, hit, after) {
+  busy = true;
+  const t = document.createElement('div'); t.className = 'm bot typing'; t.innerHTML = '<i></i><i></i><i></i>'; msgs.appendChild(t); msgs.scrollTop = msgs.scrollHeight;
+  setTimeout(() => { t.remove(); add(text, 'bot'); kbRender(hit); busy = false; if (after) after(); }, 650 + Math.min(text.length*6, 700));
+}
+function setChips(list) {
+  chips.innerHTML = list.map(c=>'<button type="button">'+c+'</button>').join('');
+}
+const DEFAULT_CHIPS = ['Çalışma saatleriniz?','Kanal tedavisi ne kadar?','Randevu almak istiyorum','Adresiniz nerede?','SGK geçiyor mu?'];
+
+function addLead(l) {
+  leads.unshift(l);
+  document.getElementById('lc').textContent = leads.length + ' talep';
+  document.getElementById('leads').innerHTML = leads.map(x =>
+    '<div class="lead"><b>'+esc(x.ad)+' · '+esc(x.tel)+'</b><span>'+esc(x.konu)+' · tercih: '+esc(x.zaman)+'</span><br><span>Kaynak: web sitesi asistanı · '+x.saat+'</span></div>').join('');
+}
+
+function answer(raw) {
+  const t = norm(raw);
+  // Randevu akışı
+  if (flow) {
+    if (flow.step==='ad') { flow.ad = raw.trim(); flow.step='tel'; return reply('Memnun oldum '+flow.ad.split(' ')[0]+'. Size ulaşabilmemiz için cep telefonunuzu yazar mısınız?', 'randevu'); }
+    if (flow.step==='tel') {
+      if (raw.replace(/\D/g,'').length < 10) return reply('Numarayı tam anlayamadım. 05xx ile başlayan 11 haneli numaranızı yazabilir misiniz?', 'randevu');
+      flow.tel = raw.trim(); flow.step='konu'; setChips(['Muayene','Diş taşı temizliği','Kanal tedavisi','Beyazlatma','Implant']);
+      return reply('Teşekkürler. Hangi konuda randevu istiyorsunuz?', 'randevu');
+    }
+    if (flow.step==='konu') { flow.konu = raw.trim(); flow.step='zaman'; setChips(['Hafta içi sabah','Hafta içi akşam','Cumartesi']); return reply('Hangi zaman aralığı size uygun olur?', 'randevu'); }
+    if (flow.step==='zaman') {
+      const l = { ad:flow.ad, tel:flow.tel, konu:flow.konu, zaman:raw.trim(), saat:new Date().toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit'}) };
+      const ad = flow.ad.split(' ')[0]; flow = null; addLead(l); setChips(DEFAULT_CHIPS);
+      return reply('Harika '+ad+', talebinizi aldım ✅\nEkibimiz en geç bir iş günü içinde sizi arayıp kesin saati onaylayacak. Başka merak ettiğiniz bir şey var mı?', 'randevu');
+    }
+  }
+  if (has(t, ['insan','yetkili','temsilci','biriyle konus','telefon numar','arayin'])) return reply('Elbette. Sizi ekibimizle görüştürmek için bir not bıraktım. Mesai saatlerinde 0216 000 00 00 numarasından da ulaşabilirsiniz.', 'randevu');
+  if (has(t, ['randevu','yer var','musait','muayene olmak'])) { flow = { step:'ad' }; setChips([]); return reply('Tabii, yardımcı olayım. Önce adınızı ve soyadınızı yazar mısınız?', 'randevu'); }
+  if (has(t, ['saat','acik','kacta','calisma','pazar','cumartesi'])) return reply('Pazartesi–Cumartesi 09:00–19:00 arası açığız. Pazar günü kapalıyız.', 'saat');
+  if (has(t, ['adres','nerede','konum','ulasim','yol tarifi','otopark'])) return reply('Moda Caddesi No:24/3, Kadıköy/İstanbul. Kadıköy iskelesinden yürüyerek yaklaşık 10 dakika. Binanın karşısında ücretli otopark var.', 'adres');
+  if (has(t, ['sgk','sigorta','anlasma'])) return reply('SGK ile anlaşmamız yok, ancak birçok özel sağlık sigortasıyla çalışıyoruz. Sigorta şirketinizi yazarsanız kontrol edip dönelim.', 'sgk');
+  if (has(t, ['taksit','odeme','kart','nakit','pesin'])) return reply('Nakit ve tüm kredi kartlarıyla ödeme alıyoruz. Tedavi bedelinde 6 aya kadar taksit imkânı var.', 'odeme');
+  for (const [key, val] of Object.entries(PRICES)) {
+    const kw = { implant:['implant'], kanal:['kanal'], dolgu:['dolgu'], beyazlatma:['beyazlat'], temizlik:['temizlik','tasi','detartaj'], ortodonti:['ortodont','tel ','plak','dis teli'] }[key];
+    if (has(t+' ', kw)) return reply(val + '\n\nNet fiyat muayene sonrası belirlenir. Muayenemiz ücretsizdir. Randevu ister misiniz?', 'fiyat');
+  }
+  if (has(t, ['fiyat','ucret','kac para','ne kadar','kac lira'])) return reply('Muayenemiz ücretsiz. Tedavi fiyatları dişe göre değişir. Hangi tedaviyi merak ediyorsunuz? (implant, kanal, dolgu, beyazlatma, diş taşı temizliği)', 'fiyat');
+  if (has(t, ['merhaba','selam','iyi gunler','gunaydin','iyi aksamlar'])) return reply('Merhaba! Ben Yaprak. Fiyat, çalışma saatleri, adres gibi konularda yardımcı olabilir, randevu talebinizi alabilirim.', 'saat');
+  if (has(t, ['tesekkur','sag ol','eyvallah'])) return reply('Rica ederim, iyi günler dilerim 🌿', null);
+  // Bilmediği konu: uydurmaz, talep bırakmayı önerir
+  return reply('Bu konuda elimdeki bilgi kesin değil, yanlış bir şey söylemek istemem. İsterseniz adınızı ve telefonunuzu bırakın, ekibimiz size dönsün. "Randevu almak istiyorum" yazarak başlayabilirsiniz.', null);
+}
+function send(text) {
+  text = text.trim(); if (!text || busy) return;
+  add(text, 'me'); answer(text);
+}
+document.getElementById('form').addEventListener('submit', e => { e.preventDefault(); const i = document.getElementById('q'); const v = i.value; i.value=''; send(v); });
+chips.addEventListener('click', e => { if (e.target.tagName==='BUTTON') send(e.target.textContent); });
+
+kbRender(); setChips(DEFAULT_CHIPS);
+setTimeout(() => add('Merhaba! Ben Yeşil Yaprak Diş Kliniği\'nin sanal asistanıyım 🌿\nFiyat, saat, adres gibi sorularınızı yanıtlayabilir, randevu talebinizi alabilirim.', 'bot'), 300);
+</script>
+</body>
+</html>

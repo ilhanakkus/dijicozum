@@ -1,0 +1,13 @@
+/* Demo sayfaları için ortak üst şerit ve yardımcılar */
+:root { --demo-bar: 44px; }
+body.demo-page { padding-top: var(--demo-bar); }
+.demo-bar {
+  position: fixed; inset: 0 0 auto 0; height: var(--demo-bar); z-index: 1000;
+  background: #0f172a; color: #e6eaf2; display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 0 14px; font: 600 13px/1.2 "Plus Jakarta Sans", system-ui, sans-serif;
+}
+.demo-bar a { color: #ffb98f; white-space: nowrap; }
+.demo-bar .tag { background: #e8590c; color: #fff; padding: 3px 9px; border-radius: 999px; font-size: 11px; letter-spacing: .06em; margin-right: 10px; }
+.demo-bar .back { color: #b6bfd0; }
+.demo-bar .mid { flex: 1; text-align: center; color: #b6bfd0; font-weight: 500; }
+@media (max-width: 720px) { .demo-bar .mid { display: none; } }
