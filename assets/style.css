@@ -63,6 +63,7 @@ h3 { font-size: 20px; font-weight: 700; }
 }
 .nav-in { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; }
+.logo img { display: block; height: 34px; width: auto; }
 .logo-mark {
   width: 34px; height: 34px; border-radius: 10px; background: var(--brand);
   display: grid; place-items: center; box-shadow: 0 6px 14px -6px rgba(232, 89, 12, .8);

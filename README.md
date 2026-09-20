@@ -21,6 +21,29 @@ assets/
   style.css           Ana site stilleri
   demo.css / demo.js  Demo sayfalarındaki "DEMO" üst şeridi
 vercel.json           Temiz URL'ler ve güvenlik başlıkları
+tools/                Logo üretim betikleri (aşağıya bakın)
+```
+
+## Logo ve marka dosyaları
+
+`assets/logo/` içinde, yazıları eğrilere çevrilmiş (yazı tipi gerektirmeyen) dosyalar:
+
+| Dosya | Kullanım |
+|---|---|
+| `logo-a.svg` / `-dark` / `-mono` | **Ana logo** (ikon + yazı). Açık zemin / koyu zemin / siyah-beyaz |
+| `logo-c.svg` / `-dark` / `-mono` | **İkincil logo** (yalnızca yazı: `dijiçözüm.`) |
+| `icon.svg` | Tek başına simge |
+| `png/` | Şeffaf PNG'ler ve beyaz zeminli siyah-beyaz sürümler (marka başvurusu için) |
+| `../og-image.png` | Sosyal medya paylaşım görseli (1200×630) |
+
+Renkler: turuncu `#e8590c`, lacivert `#0f172a`. Yazı tipi: Plus Jakarta Sans ExtraBold (SIL Open Font License).
+
+Yeniden üretmek için (yazı tipi dosyası gerekir):
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install fonttools
+.venv/bin/python tools/build_logos.py PlusJakartaSans-ExtraBold.ttf
+bash tools/export_pngs.sh PlusJakartaSans-ExtraBold.ttf
 ```
 
 Her demo kendi içinde tamamdır; demo verileri yalnızca ziyaretçinin tarayıcısında (localStorage) tutulur, sunucuya bir şey gönderilmez.
@@ -50,7 +73,8 @@ python3 -m http.server 4173
 ## Yayın öncesi kontrol listesi
 
 - [ ] `merhaba@dijicozum.com` gerçekten çalışıyor mu? (Turkticaret e-posta paketi, Zoho Mail veya Google Workspace ile açın. Adres `assets/config.js` içinde.)
-- [ ] `gizlilik.html` içindeki `[Ad Soyad / Şirket Unvanı]` ve `[Adres]` alanları dolduruldu, metin hukuk danışmanınca kontrol edildi.
+- [ ] Şirket kurulunca `gizlilik.html` 1. maddesine ticari unvan, vergi numarası ve adres eklendi; metin hukuk danışmanınca kontrol edildi.
+- [ ] Marka başvurusu (TÜRKPATENT, sınıf 35 ve 42): logolu başvuru önerilir; `assets/logo/png/*-mono-beyaz-zemin.png` dosyaları hazır.
 - [ ] Hukuki yapı (şahıs/limited) netleşti; fatura ve unvan bilgisi siteye eklendi.
 - [ ] İletişim formu şu an kullanıcının e-posta uygulamasını açar (`mailto`). Gerçek form için Formspree/Resend gibi bir servis bağlanabilir.
 - [ ] Google Search Console'a `dijicozum.com` eklenip `sitemap.xml` gönderildi.

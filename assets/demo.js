@@ -7,6 +7,11 @@
     '<span><span class="tag">DEMO</span><a class="back" href="../index.html#vitrin">← Tüm demolar</a></span>' +
     '<span class="mid">Bu sayfa ' + S.brand + ' tarafından hazırlanmış örnek bir çalışmadır. Veriler kurgudur.</span>' +
     '<a href="../index.html#iletisim">Bunu kendi işletmem için istiyorum →</a>';
+  if (!document.querySelector('link[rel~="icon"]')) {
+    const ic = document.createElement("link");
+    ic.rel = "icon"; ic.type = "image/svg+xml"; ic.href = "/assets/logo/icon.svg";
+    document.head.appendChild(ic);
+  }
   document.body.classList.add("demo-page");
   document.body.prepend(bar);
 })();
