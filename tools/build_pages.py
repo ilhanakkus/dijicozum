@@ -3,6 +3,7 @@
 Kullanım:  python3 tools/build_pages.py
 Sayfa metinlerini değiştirmek için bu dosyadaki PAGES sözlüğünü düzenleyin, sonra çalıştırın.
 """
+import hashlib
 import json
 from html import escape
 from pathlib import Path
@@ -12,6 +13,16 @@ SITE = "https://dijicozum.com"
 BRAND = "DijiÇözüm"
 EMAIL = "merhaba@dijicozum.com"
 TODAY = "2026-09-20"
+
+
+def _ver(*names):
+    h = hashlib.md5()
+    for n in names:
+        h.update((ROOT / "assets" / n).read_bytes())
+    return h.hexdigest()[:8]
+
+
+V = _ver("style.css", "config.js")  # önbellek kırıcı: dosya değişince adres değişir
 
 ICON_CHECK = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
 
@@ -124,7 +135,7 @@ def head(title, desc, path, ld, extra=""):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/style.css?v={V}">
   {ld_tags}
 {extra}</head>
 <body>
@@ -290,7 +301,7 @@ def index_page():
         <div class="field"><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx"></div>
         <div class="field"><label for="eposta">E-posta (isteğe bağlı)</label><input id="eposta" name="eposta" type="email" autocomplete="email"></div>
       </div>
-      <fieldset class="field pick">
+      <fieldset class="pick">
         <legend>Ne istiyorsunuz? <span>(birden fazla seçebilirsiniz)</span></legend>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="istenen" value="Online randevu sistemi"> Randevu sistemi</label>
@@ -310,7 +321,7 @@ def index_page():
 </section>
 </main>
 ''' + footer() + '''
-<script src="/assets/config.js"></script>
+<script src="/assets/config.js?v=__V__"></script>
 <script>
 ''' + MENU_JS + '''
 const form = document.getElementById('contact-form');
@@ -358,7 +369,7 @@ form.addEventListener('submit', async e => {
 </body>
 </html>
 '''
-    return out
+    return out.replace("__V__", V)
 
 
 # ---------------------------------------------------------------- hizmet sayfaları
@@ -604,4 +615,10 @@ if __name__ == "__main__":
         (d[4], "0.6") for d in DEMOS
     ]
     (ROOT / "sitemap.xml").write_text(sitemap(urls), encoding="utf-8")
+    import re
+    for extra in ("gizlilik.html", "404.html"):
+        f = ROOT / extra
+        t = f.read_text(encoding="utf-8")
+        t = re.sub(r'(?<![\w.])/?assets/style\.css(\?v=[0-9a-f]+)?', f"/assets/style.css?v={V}", t)
+        f.write_text(t, encoding="utf-8")
     print("Üretildi: index.html,", ", ".join(f"{s}.html" for s in SERVICES), "ve sitemap.xml")

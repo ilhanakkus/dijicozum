@@ -280,7 +280,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0; margin-top: 40px; c
   margin-top: auto; padding-top: 8px; font-style: normal; font-size: 12.5px; font-weight: 700; color: var(--green);
 }
 .tile-card em::before { content: "✓ "; }
-fieldset.pick { border: 0; padding: 0; min-inline-size: 0; }
+fieldset.pick { display: block; border: 0; padding: 0; margin: 0; min-inline-size: 0; }
 fieldset.pick legend { font-weight: 700; font-size: 14px; margin-bottom: 8px; padding: 0; }
 fieldset.pick legend span { font-weight: 500; color: var(--muted); }
 .opts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
@@ -291,4 +291,4 @@ fieldset.pick legend span { font-weight: 500; color: var(--muted); }
 .opt input { width: 20px; height: 20px; accent-color: var(--brand); flex: none; }
 .opt:has(input:checked) { border-color: var(--brand); background: var(--brand-soft); }
 @media (max-width: 960px) { .hero-tiles { max-width: 560px; } }
-@media (max-width: 480px) { .hero-tiles, .opts { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .hero-tiles, .opts { grid-template-columns: 1fr; } .tile-card { padding: 18px; } }
