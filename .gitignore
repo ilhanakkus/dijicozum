@@ -6,3 +6,4 @@ node_modules
 .claude/
 .env*
 .venv
+leads/
