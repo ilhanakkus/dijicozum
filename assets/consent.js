@@ -18,6 +18,16 @@
     try { localStorage.setItem(KEY, JSON.stringify({ choice: choice, t: Date.now() })); } catch (e) {}
   }
 
+  // Kendi ziyaretlerinizi ölçümden çıkarmak için: siteyi bir kez ?internal=1 ile açın.
+  try {
+    var q = new URLSearchParams(location.search).get("internal");
+    if (q === "1") localStorage.setItem("dc_internal", "1");
+    if (q === "0") localStorage.removeItem("dc_internal");
+  } catch (e) {}
+  function isInternal() {
+    try { return localStorage.getItem("dc_internal") === "1"; } catch (e) { return false; }
+  }
+
   var loaded = false;
   function loadGA() {
     if (loaded) return;
@@ -29,9 +39,9 @@
       analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied"
     });
     gtag("js", new Date());
-    gtag("config", GA_ID, {
-      allow_google_signals: false, allow_ad_personalization_signals: false, transport_type: "beacon"
-    });
+    var cfg = { allow_google_signals: false, allow_ad_personalization_signals: false, transport_type: "beacon" };
+    if (isInternal()) cfg.traffic_type = "internal"; // Analytics'te "Internal Traffic" filtresi bunu dışlar
+    gtag("config", GA_ID, cfg);
     var s = document.createElement("script");
     s.async = true;
     s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
