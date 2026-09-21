@@ -27,10 +27,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css?v=5e7716bc">
+  <link rel="stylesheet" href="/assets/style.css?v=b816a662">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "DijiÇözüm", "url": "https://dijicozum.com/", "logo": "https://dijicozum.com/assets/logo/png/icon-512.png", "email": "merhaba@dijicozum.com", "description": "Küçük işletmeler için online randevu, sipariş, web sitesi ve yapay zeka asistanı çözümleri.", "areaServed": {"@type": "Country", "name": "Türkiye"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "DijiÇözüm", "url": "https://dijicozum.com/", "inLanguage": "tr-TR"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Demo gerçekten ücretsiz mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. İşinizi anlattıktan sonra size özel çalışan bir örnek hazırlıyoruz. Beğenmezseniz hiçbir şey ödemezsiniz."}}, {"@type": "Question", "name": "Ne kadar tutar?", "acceptedAnswer": {"@type": "Answer", "text": "İşin kapsamına göre değişir. Örneği gördükten sonra, size yazılı ve net bir fiyat veririz."}}, {"@type": "Question", "name": "Ne kadar sürede hazır olur?", "acceptedAnswer": {"@type": "Answer", "text": "Basit bir site veya randevu sistemi genellikle birkaç haftada hazır olur. Telefon uygulaması daha uzun sürer. Süreyi teklifte yazarız."}}, {"@type": "Question", "name": "Bilgisayardan anlamıyorum, kullanabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Kurulumu biz yaparız. Nasıl kullanacağınızı kısa bir videoyla ve gerekirse yazılı olarak anlatırız."}}, {"@type": "Question", "name": "Site ve alan adı kimin olur?", "acceptedAnswer": {"@type": "Answer", "text": "Sizin adınıza açarız. Bizimle çalışmayı bıraksanız bile sizde kalır."}}, {"@type": "Question", "name": "Müşteri bilgileri güvende mi?", "acceptedAnswer": {"@type": "Answer", "text": "Bilgiler KVKK'ya uygun toplanır ve aydınlatma metni eklenir. Yapay zeka asistanı yalnızca sizin verdiğiniz bilgilere göre cevap verir."}}]}</script>
+  <script src="/assets/consent.js?v=b816a662" defer></script>
 </head>
 <body>
 <header class="nav">
@@ -216,10 +217,11 @@
       <a href="/#sss">Sık sorulanlar</a>
       <a href="/#iletisim">İletişim</a>
       <a href="/gizlilik">Gizlilik ve KVKK</a>
+      <a href="#" data-cookie-settings>Çerez tercihleri</a>
     </div>
   </div>
 </footer>
-<script src="/assets/config.js?v=5e7716bc"></script>
+<script src="/assets/config.js?v=b816a662"></script>
 <script>
 document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
 const form = document.getElementById('contact-form');
@@ -256,6 +258,7 @@ form.addEventListener('submit', async e => {
     });
     const data = await res.json();
     if (!data.success) throw new Error(data.message || 'gönderilemedi');
+    if (window.dcTrack) dcTrack('generate_lead', { services: picked() });
     form.innerHTML = '<div style="text-align:center;padding:36px 12px"><div style="font-size:44px" aria-hidden="true">✅</div><h3 style="margin:10px 0 6px">Talebiniz bize ulaştı</h3><p class="small" style="font-size:16px">En kısa sürede size dönüş yapacağız. Teşekkürler!</p></div>';
   } catch (x) {
     sendBtn.disabled = false; sendBtn.textContent = 'Demomu iste';

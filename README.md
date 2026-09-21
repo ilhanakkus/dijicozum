@@ -57,6 +57,12 @@ Ana sayfa ve dört hizmet sayfası `tools/build_pages.py` ile üretilir. Metni, 
 python3 tools/build_pages.py
 ```
 
+## Ziyaret istatistikleri (Google Analytics 4)
+
+Ölçüm kimliği `assets/consent.js` içinde (`GA_ID`). KVKK gereği etiket **yalnızca ziyaretçi "Kabul et" derse** yüklenir. Reddedenler için hiçbir çerez yerleştirilmez, Google'a istek gitmez. Kararı sayfa altındaki "Çerez tercihleri" bağlantısıyla değiştirilebilir.
+
+Gönderilen özel olaylar: `generate_lead` (form gönderimi, sadece seçilen hizmetler), `demo_open`, `cta_click`, `email_click`. Ad, telefon ve e-posta hiçbir olayda gönderilmez.
+
 ## Yerelde çalıştırma
 
 ```bash

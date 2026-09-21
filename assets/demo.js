@@ -12,6 +12,11 @@
     ic.rel = "icon"; ic.type = "image/svg+xml"; ic.href = "/assets/logo/icon.svg";
     document.head.appendChild(ic);
   }
+  if (!document.querySelector('script[src*="consent.js"]')) {
+    const c = document.createElement("script");
+    c.src = "/assets/consent.js"; c.defer = true;
+    document.head.appendChild(c);
+  }
   document.body.classList.add("demo-page");
   document.body.prepend(bar);
 })();

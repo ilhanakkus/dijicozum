@@ -22,7 +22,7 @@ def _ver(*names):
     return h.hexdigest()[:8]
 
 
-V = _ver("style.css", "config.js")  # önbellek kırıcı: dosya değişince adres değişir
+V = _ver("style.css", "config.js", "consent.js")  # önbellek kırıcı: dosya değişince adres değişir
 
 ICON_CHECK = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
 
@@ -70,6 +70,7 @@ def footer():
       <a href="/#sss">Sık sorulanlar</a>
       <a href="/#iletisim">İletişim</a>
       <a href="/gizlilik">Gizlilik ve KVKK</a>
+      <a href="#" data-cookie-settings>Çerez tercihleri</a>
     </div>
   </div>
 </footer>'''
@@ -137,6 +138,7 @@ def head(title, desc, path, ld, extra=""):
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css?v={V}">
   {ld_tags}
+  <script src="/assets/consent.js?v={V}" defer></script>
 {extra}</head>
 <body>
 '''
@@ -358,6 +360,7 @@ form.addEventListener('submit', async e => {
     });
     const data = await res.json();
     if (!data.success) throw new Error(data.message || 'gönderilemedi');
+    if (window.dcTrack) dcTrack('generate_lead', { services: picked() });
     form.innerHTML = '<div style="text-align:center;padding:36px 12px"><div style="font-size:44px" aria-hidden="true">✅</div><h3 style="margin:10px 0 6px">Talebiniz bize ulaştı</h3><p class="small" style="font-size:16px">En kısa sürede size dönüş yapacağız. Teşekkürler!</p></div>';
   } catch (x) {
     sendBtn.disabled = false; sendBtn.textContent = 'Demomu iste';
