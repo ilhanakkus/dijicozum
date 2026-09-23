@@ -26,6 +26,18 @@ V = _ver("style.css", "config.js", "consent.js")  # önbellek kırıcı: dosya d
 
 ICON_CHECK = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
 
+ICON_PATHS = {
+    "randevu": '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/>',
+    "siparis": '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>',
+    "web": '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/>',
+    "asistan": '<path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/>',
+    "uygulama": '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/>',
+}
+
+
+def icon(name, size=26):
+    return f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICON_PATHS[name]}</svg>'
+
 # ---------------------------------------------------------------- ortak parçalar
 NAV = [
     ("/randevu-sistemi", "Randevu"),
@@ -132,7 +144,7 @@ def head(title, desc, path, ld, extra=""):
   <link rel="icon" href="/assets/logo/icon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#fbf8f3">
+  <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
@@ -164,11 +176,11 @@ PROBLEMS = [
 ]
 
 DEMOS = [
-    ("shot-a", "Randevu", "Kuaför randevu sistemi", "Müşteri saati seçer. Randevu hemen sizin panelinize düşer.", "/demo/randevu", "Usta Makas", "Saç kesimi · 30 dk"),
-    ("shot-b", "Sipariş", "Restoran sipariş sistemi", "Masadan QR okutulur, sipariş mutfak ekranına düşer.", "/demo/siparis", "Lokanta Sofra", "Adana dürüm · ₺185"),
-    ("shot-c", "Yapay zeka", "Müşteri asistanı", "Fiyat ve saat sorularını cevaplar, randevu isteğini toplar.", "/demo/asistan", "Asistan", "Çalışma saatleriniz?"),
-    ("shot-d", "Telefon uygulaması", "Spor salonu uygulaması", "Ders programı, QR kart ve bildirimler.", "/demo/uygulama", "Fit Stüdyo", "Bugün 18:30"),
-    ("shot-e", "Web sitesi", "Kurumsal web sitesi", "Telefonda ve bilgisayarda düzgün açılan bir site.", "/demo/kurumsal", "Yıldız Mühendislik", "Hizmetler · İletişim"),
+    ("randevu", "Randevu", "Kuaför randevu sistemi", "Müşteri saati seçer. Randevu hemen sizin panelinize düşer.", "/demo/randevu"),
+    ("siparis", "Sipariş", "Restoran sipariş sistemi", "Masadan QR okutulur, sipariş mutfak ekranına düşer.", "/demo/siparis"),
+    ("asistan", "Yapay zeka", "Müşteri asistanı", "Fiyat ve saat sorularını cevaplar, randevu isteğini toplar.", "/demo/asistan"),
+    ("uygulama", "Telefon uygulaması", "Spor salonu uygulaması", "Ders programı, QR kart ve bildirimler.", "/demo/uygulama"),
+    ("web", "Web sitesi", "Kurumsal web sitesi", "Telefonda ve bilgisayarda düzgün açılan bir site.", "/demo/kurumsal"),
 ]
 
 
@@ -201,19 +213,19 @@ def index_page():
     </div>
     <div class="hero-tiles">
       <a class="tile-card" href="/randevu-sistemi">
-        <span class="icon-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></span>
+        <span class="icon-box">{icon("randevu")}</span>
         <b>Randevu sistemi</b><span>Müşteri internetten saat seçer.</span><em>Tek başına alınır</em>
       </a>
       <a class="tile-card" href="/siparis-sistemi">
-        <span class="icon-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span>
+        <span class="icon-box">{icon("siparis")}</span>
         <b>Sipariş sistemi</b><span>QR menü ve online sipariş.</span><em>Tek başına alınır</em>
       </a>
       <a class="tile-card" href="/web-sitesi">
-        <span class="icon-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></span>
+        <span class="icon-box">{icon("web")}</span>
         <b>Web sitesi</b><span>Telefonda düzgün açılır, Google'da bulunur.</span><em>Tek başına alınır</em>
       </a>
       <a class="tile-card" href="/yapay-zeka-asistani">
-        <span class="icon-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span>
+        <span class="icon-box">{icon("asistan")}</span>
         <b>Yapay zeka asistanı</b><span>Müşteri sorularını 7/24 cevaplar.</span><em>Tek başına alınır</em>
       </a>
     </div>
@@ -249,7 +261,7 @@ def index_page():
   </div>
 </section>
 
-<section id="ornekler" class="vitrin">
+<section id="ornekler" class="showcase">
   <div class="wrap">
     <div class="section-head">
       <h2>Almadan önce deneyin</h2>
@@ -257,10 +269,10 @@ def index_page():
     </div>
     <div class="demo-grid">
 '''
-    for shot, tag, title_, text, href, brand, line in DEMOS:
+    for ic, tag, title_, text, href in DEMOS:
         out += f'''      <a class="demo" href="{href}">
-        <div class="demo-shot {shot}"><div class="mini"><b>{escape(brand)}</b><div class="row"><span>{escape(line)}</span></div></div></div>
-        <div class="demo-body"><span class="demo-tag">{escape(tag)}</span><h3>{escape(title_)}</h3><p>{escape(text)}</p><span class="link-arrow">Dene</span></div>
+        <span class="icon-box">{icon(ic, 22)}</span>
+        <span class="demo-tag">{escape(tag)}</span><h3>{escape(title_)}</h3><p>{escape(text)}</p><span class="link-arrow">Dene</span>
       </a>
 '''
     out += '''    </div>
