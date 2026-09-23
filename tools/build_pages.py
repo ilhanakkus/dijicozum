@@ -199,7 +199,7 @@ def index_page():
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Küçük işletmeler için</span>
-      <h1>Hangisine ihtiyacınız varsa <em>sadece onu</em> kuruyoruz.</h1>
+      <h1>İşletmenizin dijital <em>tek adresi</em>.</h1>
       <p class="lead">Online randevu, sipariş, web sitesi ve yapay zeka asistanı. Her biri ayrı ayrı alınır. İsterseniz birlikte de kurarız.</p>
       <div class="hero-cta">
         <a href="#iletisim" class="btn btn-primary">Ücretsiz demonu iste</a>
