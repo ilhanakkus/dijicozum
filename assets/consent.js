@@ -122,6 +122,7 @@
     if (h.indexOf("/demo/") > -1) window.dcTrack("demo_open", { demo: h.split("/demo/")[1].split(/[?#]/)[0] });
     else if (h.indexOf("#iletisim") > -1) window.dcTrack("cta_click", { page: location.pathname });
     else if (h.indexOf("mailto:") === 0) window.dcTrack("email_click", { page: location.pathname });
+    else if (h.indexOf("wa.me/") > -1) window.dcTrack("whatsapp_click", { page: location.pathname });
   });
 
   function start() {

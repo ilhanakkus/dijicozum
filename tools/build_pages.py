@@ -7,6 +7,7 @@ import hashlib
 import json
 from html import escape
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://dijicozum.com"
@@ -46,6 +47,20 @@ NAV = [
     ("/yapay-zeka-asistani", "Yapay zeka"),
     ("/#ornekler", "Örnekler"),
 ]
+
+
+WA_NUMBER = "905451579311"
+WA_TEXT = "Merhaba, web sitenizden yazıyorum."
+
+
+def wa_float():
+    href = f"https://wa.me/{WA_NUMBER}?text={quote(WA_TEXT)}"
+    return (
+        f'<a class="wa-float" href="{href}" target="_blank" rel="noopener" aria-label="WhatsApp\'tan yazın">'
+        '<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
+        '<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.14h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm5.8 14.02c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.31-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94s.73-2.09.99-2.37c.26-.29.56-.36.75-.36l.53.01c.17.01.4-.06.62.48.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.71 1.19 1.53 1.93 1.05.95 1.94 1.25 2.22 1.39.28.14.45.12.62-.07.17-.19.71-.83.9-1.12.19-.28.38-.24.63-.14.26.09 1.65.79 1.93.93.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/>'
+        '</svg></a>'
+    )
 
 
 def header():
@@ -335,7 +350,7 @@ def index_page():
   </div>
 </section>
 </main>
-''' + footer() + '''
+''' + footer() + wa_float() + '''
 <script src="/assets/config.js?v=__V__"></script>
 <script>
 ''' + MENU_JS + '''
@@ -608,7 +623,7 @@ def service_page(slug):
   </div>
 </section>
 </main>
-''' + footer() + f'''
+''' + footer() + wa_float() + f'''
 <script>{MENU_JS}</script>
 </body>
 </html>
