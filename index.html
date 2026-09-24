@@ -28,11 +28,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css?v=0e1e8892">
+  <link rel="stylesheet" href="/assets/style.css?v=d0e2ab8d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "DijiÇözüm", "url": "https://dijicozum.com/", "logo": "https://dijicozum.com/assets/logo/png/icon-512.png", "email": "merhaba@dijicozum.com", "description": "Küçük işletmeler için online randevu, sipariş, web sitesi ve yapay zeka asistanı çözümleri.", "areaServed": {"@type": "Country", "name": "Türkiye"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "DijiÇözüm", "url": "https://dijicozum.com/", "inLanguage": "tr-TR"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Demo gerçekten ücretsiz mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. İşinizi anlattıktan sonra size özel çalışan bir örnek hazırlıyoruz. Beğenmezseniz hiçbir şey ödemezsiniz."}}, {"@type": "Question", "name": "Ne kadar tutar?", "acceptedAnswer": {"@type": "Answer", "text": "İşin kapsamına göre değişir. Örneği gördükten sonra, size yazılı ve net bir fiyat veririz."}}, {"@type": "Question", "name": "Ne kadar sürede hazır olur?", "acceptedAnswer": {"@type": "Answer", "text": "Basit bir site veya randevu sistemi genellikle birkaç haftada hazır olur. Telefon uygulaması daha uzun sürer. Süreyi teklifte yazarız."}}, {"@type": "Question", "name": "Bilgisayardan anlamıyorum, kullanabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Kurulumu biz yaparız. Nasıl kullanacağınızı kısa bir videoyla ve gerekirse yazılı olarak anlatırız."}}, {"@type": "Question", "name": "Site ve alan adı kimin olur?", "acceptedAnswer": {"@type": "Answer", "text": "Sizin adınıza açarız. Bizimle çalışmayı bıraksanız bile sizde kalır."}}, {"@type": "Question", "name": "Müşteri bilgileri güvende mi?", "acceptedAnswer": {"@type": "Answer", "text": "Bilgiler KVKK'ya uygun toplanır ve aydınlatma metni eklenir. Yapay zeka asistanı yalnızca sizin verdiğiniz bilgilere göre cevap verir."}}]}</script>
-  <script src="/assets/consent.js?v=0e1e8892" defer></script>
+  <script src="/assets/consent.js?v=d0e2ab8d" defer></script>
 </head>
 <body>
 <header class="nav">
@@ -252,10 +252,12 @@
     e.preventDefault();
     var msg=text.value.trim()||'Merhaba, web sitenizden yazıyorum.';
     if(window.dcTrack)dcTrack('whatsapp_click',{page:location.pathname});
-    location.href='https://wa.me/905451579311?text='+encodeURIComponent(msg);
+    var mobil=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    var url=mobil?'https://wa.me/905451579311?text=':'https://web.whatsapp.com/send?phone=905451579311&text=';
+    location.href=url+encodeURIComponent(msg);
   });
 })();</script>
-<script src="/assets/config.js?v=0e1e8892"></script>
+<script src="/assets/config.js?v=d0e2ab8d"></script>
 <script>
 document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
 const form = document.getElementById('contact-form');

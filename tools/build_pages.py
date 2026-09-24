@@ -93,7 +93,9 @@ def wa_widget():
     e.preventDefault();
     var msg=text.value.trim()||{WA_TEXT!r};
     if(window.dcTrack)dcTrack('whatsapp_click',{{page:location.pathname}});
-    location.href='https://wa.me/{WA_NUMBER}?text='+encodeURIComponent(msg);
+    var mobil=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    var url=mobil?'https://wa.me/{WA_NUMBER}?text=':'https://web.whatsapp.com/send?phone={WA_NUMBER}&text=';
+    location.href=url+encodeURIComponent(msg);
   }});
 }})();</script>'''
 
