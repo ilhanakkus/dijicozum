@@ -157,16 +157,42 @@ form.contact { background: var(--card); border: 1px solid var(--line); border-ra
 .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .small { font-size: 13px; color: var(--muted); }
 
-/* WhatsApp yüzen düğme */
+/* WhatsApp widget: yüzen düğme + site içi sohbet paneli */
+.wa-widget { position: fixed; right: 20px; bottom: 20px; z-index: 900; }
 .wa-float {
-  position: fixed; right: 20px; bottom: 20px; z-index: 900;
-  width: 56px; height: 56px; border-radius: 50%;
+  width: 56px; height: 56px; border-radius: 50%; border: 0; cursor: pointer;
   background: #25d366; color: #fff; display: grid; place-items: center;
   box-shadow: 0 10px 24px -8px rgba(37, 211, 102, .65);
   transition: transform .15s;
 }
 .wa-float:hover { transform: scale(1.08); }
-@media (max-width: 640px) { .wa-float { right: 14px; bottom: 14px; width: 52px; height: 52px; } }
+.wa-panel {
+  position: absolute; right: 0; bottom: 72px; width: 320px; max-width: calc(100vw - 40px);
+  background: #fff; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;
+  box-shadow: 0 20px 48px -12px rgba(15, 23, 42, .4); border: 1px solid var(--line);
+}
+.wa-panel[hidden] { display: none; }
+.wa-panel-head { background: #075e54; color: #fff; display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
+.wa-panel-avatar { width: 38px; height: 38px; border-radius: 50%; background: #fff; padding: 6px; flex: none; }
+.wa-panel-head b { display: block; font-size: 15px; }
+.wa-panel-head span { display: block; font-size: 12px; color: #cfe9e4; margin-top: 1px; }
+.wa-panel-close { margin-left: auto; background: none; border: 0; color: #fff; font-size: 22px; line-height: 1; cursor: pointer; padding: 4px; opacity: .85; }
+.wa-panel-close:hover { opacity: 1; }
+.wa-panel-body { background: #e9ddc9; padding: 16px; }
+.wa-bubble { background: #fff; border-radius: 4px 12px 12px 12px; padding: 10px 12px; font-size: 13.5px; line-height: 1.45; max-width: 88%; box-shadow: 0 1px 1px rgba(0, 0, 0, .08); }
+.wa-panel-form { display: flex; align-items: flex-end; gap: 8px; padding: 10px; border-top: 1px solid var(--line); }
+.wa-panel-form textarea {
+  flex: 1; resize: none; height: 40px; padding: 9px 14px; border-radius: 999px; border: 1.5px solid var(--line);
+  font: inherit; font-size: 13.5px; line-height: 1.3;
+}
+.wa-panel-form textarea:focus { outline: none; border-color: #25d366; }
+.wa-send { width: 38px; height: 38px; border-radius: 50%; background: #25d366; color: #fff; border: 0; display: grid; place-items: center; flex: none; cursor: pointer; }
+.wa-send:hover { background: #1eb856; }
+@media (max-width: 640px) {
+  .wa-widget { right: 14px; bottom: 14px; }
+  .wa-float { width: 52px; height: 52px; }
+  .wa-panel { bottom: 64px; }
+}
 
 /* Footer */
 footer { border-top: 1px solid var(--line); padding: 40px 0; margin-top: 24px; color: var(--muted); font-size: 14px; }
