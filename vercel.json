@@ -2,6 +2,23 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/r/randevu",
+      "destination": "/demo/randevu?utm_source=eposta&utm_medium=soguk&utm_campaign=guzellik-turkiye&utm_content=v1",
+      "permanent": false
+    },
+    {
+      "source": "/r/siparis",
+      "destination": "/demo/siparis?utm_source=eposta&utm_medium=soguk&utm_campaign=restoran-turkiye&utm_content=v1",
+      "permanent": false
+    },
+    {
+      "source": "/r/site",
+      "destination": "/demo/kurumsal?utm_source=eposta&utm_medium=soguk&utm_campaign=web-turkiye&utm_content=v1",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
