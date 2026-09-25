@@ -191,8 +191,8 @@
           <label class="opt"><input type="checkbox" name="istenen" value="Ordering &amp; QR menu"> Ordering &amp; QR menu</label>
           <label class="opt"><input type="checkbox" name="istenen" value="Website"> Website</label>
           <label class="opt"><input type="checkbox" name="istenen" value="AI assistant"> AI assistant</label>
-          <label class="opt"><input type="checkbox" name="istenen" value="Phone app"> Phone app</label>
-          <label class="opt"><input type="checkbox" name="istenen" value="Not sure, suggest something"> Not sure, suggest something</label>
+          <label class="opt"><input type="checkbox" name="istenen" value="Mobile app"> Mobile app</label>
+          <label class="opt"><input type="checkbox" name="istenen" value="Let&#x27;s decide together"> Let&#x27;s decide together</label>
         </div>
       </fieldset>
             <div class="field"><label for="mesaj">Briefly describe your business (optional)</label><textarea id="mesaj" name="mesaj" placeholder="E.g. I run a hair salon, I currently take bookings by phone."></textarea></div>
@@ -267,7 +267,7 @@ document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>d
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 const sendBtn = document.getElementById('send-btn');
-const DEFAULT_OPT = "Not sure, suggest something";
+const DEFAULT_OPT = "Let's decide together";
 function picked(){ const v = [...form.querySelectorAll('input[name=istenen]:checked')].map(x => x.value); return v.length ? v.join(', ') : DEFAULT_OPT; }
 function err(m){ statusEl.style.color = '#b42318'; statusEl.textContent = m; }
 function mailtoFallback(f) {
