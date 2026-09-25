@@ -62,11 +62,15 @@ h3 { font-size: 19px; font-weight: 700; }
   position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, .92);
   backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
 }
-.nav-in { display: flex; align-items: center; justify-content: space-between; height: 70px; }
-.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; }
+.nav-in { display: flex; align-items: center; gap: 22px; height: 70px; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; margin-right: auto; }
 .logo img { display: block; height: 32px; width: auto; }
 .nav-links { display: flex; gap: 30px; font-weight: 600; font-size: 15px; color: var(--muted); }
 .nav-links a:hover { color: var(--ink); }
+.lang-switch { display: flex; gap: 2px; font-weight: 700; font-size: 12.5px; }
+.lang-switch a { padding: 5px 9px; border-radius: 999px; color: var(--muted); }
+.lang-switch a.on { background: var(--ink); color: #fff; }
+.lang-switch a:hover:not(.on) { color: var(--ink); }
 .nav-toggle { display: none; background: none; border: 0; padding: 8px; }
 
 /* Hero */
