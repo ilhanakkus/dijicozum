@@ -33,7 +33,7 @@ NO_PREFIX = ("/demo/", "/assets/", "/gizlilik", "mailto:", "http")
 
 def L(path, lang):
     """Bir site-içi yolu dile göre önekler (TR = kök, diğerleri /xx/...)."""
-    if lang == DEFAULT_LANG or path.startswith(NO_PREFIX):
+    if lang == DEFAULT_LANG or path.startswith(NO_PREFIX) or path.startswith("#"):
         return path
     if path == "/":
         return f"/{lang}/"
@@ -55,6 +55,7 @@ ICON_PATHS = {
     "web": '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/>',
     "asistan": '<path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/>',
     "uygulama": '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/>',
+    "oneri": '<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.9c.6.4 1 1.1 1 1.9v.2h6v-.2c0-.8.4-1.5 1-1.9A7 7 0 0 0 12 2z"/>',
 }
 
 
@@ -84,12 +85,13 @@ UI = {
         hero_cta1="Ücretsiz demonu iste", hero_cta2="Hizmetleri gör",
         hero_points=["Önce örnek, sonra karar", "Ziyaret gerekmez", "İngilizce destek de mümkün"],
         tiles=[
-            ("randevu", "/randevu-sistemi", "Randevu sistemi", "Müşteri internetten saat seçer."),
-            ("siparis", "/siparis-sistemi", "Sipariş sistemi", "QR menü ve online sipariş."),
-            ("web", "/web-sitesi", "Web sitesi", "Telefonda düzgün açılır, Google'da bulunur."),
-            ("asistan", "/yapay-zeka-asistani", "Yapay zeka asistanı", "Müşteri sorularını 7/24 cevaplar."),
+            ("randevu", "/randevu-sistemi", "Randevu sistemi", "Müşteri internetten saat seçer.", "Tek başına alınır"),
+            ("siparis", "/siparis-sistemi", "Sipariş sistemi", "QR menü ve online sipariş.", "Tek başına alınır"),
+            ("web", "/web-sitesi", "Web sitesi", "Telefonda düzgün açılır, Google'da bulunur.", "Tek başına alınır"),
+            ("asistan", "/yapay-zeka-asistani", "Yapay zeka asistanı", "Müşteri sorularını 7/24 cevaplar.", "Tek başına alınır"),
+            ("uygulama", "/demo/uygulama", "Mobil uygulama", "Randevu, sipariş ya da özel bir işiniz için telefon uygulaması.", "Talep üzerine"),
+            ("oneri", "#iletisim", "Birlikte karar verelim", "İşinizi kısaca anlatın, size en uygun çözümü önerelim.", "Hemen yazın"),
         ],
-        tile_tag="Tek başına alınır",
         hizmetler_h2="Bunlardan biri size tanıdık geliyor mu?", hizmetler_lead="Her biri ayrı bir hizmet. Size lazım olana tıklayın.",
         nasil_h2="Nasıl çalışıyor? Üç adım.",
         steps3=[("Bize yazın", "Aşağıdaki formu doldurun. İşinizi bir iki cümleyle anlatın."),
@@ -135,12 +137,13 @@ UI = {
         hero_cta1="Get your free demo", hero_cta2="See services",
         hero_points=["See it first, decide later", "No visit required", "English-speaking support"],
         tiles=[
-            ("randevu", "/randevu-sistemi", "Booking system", "Customers pick a time online."),
-            ("siparis", "/siparis-sistemi", "Ordering system", "QR menu and online ordering."),
-            ("web", "/web-sitesi", "Website", "Looks right on phones, easy to find on Google."),
-            ("asistan", "/yapay-zeka-asistani", "AI assistant", "Answers customer questions, 24/7."),
+            ("randevu", "/randevu-sistemi", "Booking system", "Customers pick a time online.", "Works on its own"),
+            ("siparis", "/siparis-sistemi", "Ordering system", "QR menu and online ordering.", "Works on its own"),
+            ("web", "/web-sitesi", "Website", "Looks right on phones, easy to find on Google.", "Works on its own"),
+            ("asistan", "/yapay-zeka-asistani", "AI assistant", "Answers customer questions, 24/7.", "Works on its own"),
+            ("uygulama", "/demo/uygulama", "Mobile app", "A phone app for booking, ordering, or your own specific need.", "On request"),
+            ("oneri", "#iletisim", "Let's decide together", "Tell us briefly about your business, we'll suggest what fits.", "Message us"),
         ],
-        tile_tag="Works on its own",
         hizmetler_h2="Does one of these sound familiar?", hizmetler_lead="Each is a separate service. Click the one you need.",
         nasil_h2="How it works. Three steps.",
         steps3=[("Message us", "Fill out the form below. Tell us about your business in a sentence or two."),
@@ -605,9 +608,9 @@ def index_page(lang):
     tiles_html = "".join(
         f'''      <a class="tile-card" href="{L(href, lang)}">
         <span class="icon-box">{icon(ic)}</span>
-        <b>{escape(name)}</b><span>{escape(text)}</span><em>{escape(u["tile_tag"])}</em>
+        <b>{escape(name)}</b><span>{escape(text)}</span><em>{escape(tag)}</em>
       </a>
-''' for ic, href, name, text in u["tiles"])
+''' for ic, href, name, text, tag in u["tiles"])
 
     out += f'''
 <section class="hero">
