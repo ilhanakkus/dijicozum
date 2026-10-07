@@ -285,6 +285,17 @@ function show(view) {
 }
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>show(t.dataset.view)));
 render();
+
+/* Kliniğe özel başlık: ?kn=Klinik Adı ya da bilinen r kodu */
+(function(){try{
+  var q=new URLSearchParams(location.search),R={kayadent:'Kayadent Diş Polikliniği',fulyadent:'Fulyadent Diş Kliniği',ayaz:'Ayaz Ağız ve Diş Sağlığı Polikliniği',sonodent:'Sonodent',alyans:'Alyans Klinik',melan:'Melan Ağız ve Diş Sağlığı Polikliniği',nesadent:'Nesadent Ağız ve Diş Sağlığı Polikliniği',attelia:'Attelia Oral & Dental Health Center'};
+  var n=(q.get('kn')||R[q.get('r')||'']||'').trim().slice(0,70);
+  if(!n)return;
+  var h=document.querySelector('.brand h1'),p=document.querySelector('.brand p');
+  if(h)h.textContent=n;
+  if(p)p.textContent='Randevu sistemi örneği · '+n+' için hazırlanmıştır';
+  document.title=n+' | Randevu Sistemi Örneği';
+}catch(e){}})();
 </script>
 </body>
 </html>
