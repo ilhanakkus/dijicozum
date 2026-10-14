@@ -385,6 +385,7 @@ def head(lang, title, desc, page_key, ld, extra=""):
   <link rel="stylesheet" href="/assets/style.css?v={V}">
   {ld_tags}
   <script src="/assets/consent.js?v={V}" defer></script>
+  <script>window.va=window.va||function(){{(window.vaq=window.vaq||[]).push(arguments)}};</script><script defer src="/_vercel/insights/script.js"></script>
 {extra}</head>
 <body>
 '''
