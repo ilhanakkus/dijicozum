@@ -14,3 +14,12 @@ Nameserver: ns1/ns2/ns3.turkticaret.net
 | CNAME | autodiscover | autodiscover.turkticaret.net |
 
 Geri dönmek gerekirse: Turkticaret'te nameserver'ları yukarıdakilere geri alın.
+
+## Geçiş durumu (6 Kasım 2026)
+
+- Nameserver'lar Cloudflare'e geçti: aron.ns.cloudflare.com, damiete.ns.cloudflare.com.
+- dijicozum.com ve www.dijicozum.com, Cloudflare Pages projesi `dijicozum`'a bağlı (CNAME → dijicozum.pages.dev, proxied).
+- www → dijicozum.com yönlendirmesi: Cloudflare Redirect Rule, 301, sorgu dizesi korunuyor.
+- E-posta kayıtları (MX, SPF, DKIM, DMARC, mail/autodiscover/autoconfig) Turkticaret'e işaret ediyor, "DNS only".
+- Cloudflare Web Analytics açık (Pages → Metrics).
+- Vercel artık kullanılmıyor; geçiş öncesinde Vercel hesabı "DEPLOYMENT_DISABLED / Payment required" veriyordu.
