@@ -2,7 +2,7 @@
 
 Web sitesi, mobil uygulama, sipariş, randevu ve yapay zeka asistanı hizmetlerinin tanıtım sitesi ve canlı demoları.
 
-Saf statik site: derleme adımı yok, bağımlılık yok. Vercel'de olduğu gibi yayınlanır.
+Saf statik site: derleme adımı yok, bağımlılık yok. Cloudflare Pages'te olduğu gibi yayınlanır.
 
 ## Yapı
 
@@ -21,7 +21,8 @@ assets/
   config.js           Marka adı, e-posta, alan adı: tek yerden yönetilir
   style.css           Ana site stilleri
   demo.css / demo.js  Demo sayfalarındaki "DEMO" üst şeridi
-vercel.json           Temiz URL'ler ve güvenlik başlıkları
+_redirects, _headers  Cloudflare Pages: kısa bağlantılar, güvenlik ve önbellek başlıkları
+vercel.json           Eski Vercel ayarları (geçiş bitince silinebilir)
 tools/                Logo üretim betikleri (aşağıya bakın)
 ```
 
@@ -70,20 +71,16 @@ python3 -m http.server 4173
 # http://localhost:4173
 ```
 
-## Yayınlama (GitHub → Vercel → dijicozum.com)
+## Yayınlama (GitHub → Cloudflare Pages → dijicozum.com)
 
-1. **GitHub:** repoyu oluşturup `main` dalına gönderin (`git push`).
-2. **Vercel:** vercel.com → Add New → Project → GitHub reposunu seçin. Framework: **Other**, Build Command ve Output Directory boş kalsın. Deploy.
-3. **Alan adı:** Vercel → Project → Settings → Domains → `dijicozum.com` ve `www.dijicozum.com` ekleyin. Vercel size DNS kayıtlarını gösterir.
-4. **DNS (Turkticaret → DNS yönetimi):** mevcut park sayfası kayıtlarını (`A 31.186.11.254` ve www için `CNAME dijicozum.com`) silin, şunları ekleyin:
+1. **GitHub:** değişiklikleri `main` dalına gönderin (`git push`).
+2. **Cloudflare Pages:** dash.cloudflare.com → Workers & Pages → Create → Pages → Connect to Git → bu repoyu seçin. Framework preset: **None**, Build command boş, Build output directory: `/`. Save and Deploy.
+3. **Analiz:** Pages projesi → Metrics → Web Analytics → Enable. Cloudflare, çerezsiz sayım betiğini sayfalara kendisi ekler; kodda bir şey yapmaya gerek yok.
+4. **Alan adı:** Pages projesi → Custom domains → `dijicozum.com` ve `www.dijicozum.com` ekleyin. En kolayı alan adının DNS'ini Cloudflare'e taşımak: Cloudflare'e site olarak ekleyin, verdiği iki nameserver'ı Turkticaret → alan adı yönetimi → nameserver ayarına yazın. **Taşımadan önce** `merhaba@dijicozum.com` için MX, SPF (TXT) ve DKIM (`mail._domainkey`) kayıtlarının Cloudflare DNS'e aktarıldığını kontrol edin, yoksa e-posta durur.
+5. `www` → `dijicozum.com` yönlendirmesi için Cloudflare → Rules → Redirect Rules ile 301 kuralı ekleyin.
+6. Bundan sonra `main` dalına yapılan her `git push` otomatik yayına alınır. Diğer dallar için önizleme adresi üretilir.
 
-   | Tür | Ad | Değer |
-   |---|---|---|
-   | A | `@` (boş) | `216.198.79.1` |
-   | CNAME | `www` | `91dda51a3d2ea529.vercel-dns-017.com` |
-
-   Alternatif eski değerler de çalışır: `A 76.76.21.21` ve `CNAME cname.vercel-dns.com`. Güncel değerler için Vercel → Project → Settings → Domains ekranına bakın. `www.dijicozum.com`, kalıcı yönlendirmeyle (308) `dijicozum.com`'a gider. Yayılması dakikalar ile birkaç saat sürebilir.
-5. Bundan sonra `main` dalına yapılan her `git push` otomatik yayına alınır. Pull request'ler için önizleme adresi üretilir.
+Cloudflare'e özgü ayar dosyaları: `_redirects` (`/r/...` kampanya kısa bağlantıları) ve `_headers` (güvenlik ve önbellek başlıkları). `.html` uzantısız temiz adresler Cloudflare Pages'te varsayılan olarak çalışır. `vercel.json` Vercel'den tamamen çıkılana kadar duruyor; Cloudflare onu yok sayar.
 
 ## Yayın öncesi kontrol listesi
 
