@@ -232,3 +232,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: 
 | 16 | Tenis Atölyesi Akademi | info@tenisatolyesi.com | A | |
 | 17 | Efor Tenis Kulübü | info@efortenis.com | A | |
 | 18 | LD Tenis Okulları | info@ldtenis.com | A | |
+
+### Binicilik kulüpleri: demo kopyası (12 Kasım 2026)
+
+Şablon [mail-sablonu-binicilik.html](mail-sablonu-binicilik.html), Akademi Binicilik Kulübü örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Not: konu pilates kampanyasıyla aynı ("ders programı WhatsApp'tan çıksın"); yanıt takibinde alan adına göre ayrılmalı. Kulüplere gönderim onay bekliyor (17 aday: [sektor-binicilik.md](sektor-binicilik.md)).
