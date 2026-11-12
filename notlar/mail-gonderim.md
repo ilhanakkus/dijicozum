@@ -260,3 +260,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: 
 | 15 | Polo Binicilik | info@polobinicilik.com.tr | B | |
 | 16 | Doğuşlu Binicilik Kulübü | info@doguslubinicilik.com | B | |
 | 17 | Uludağ Binicilik | info@uludagbinicilik.com | B | |
+
+### Dans okulları: demo kopyası (12 Kasım 2026)
+
+Şablon [mail-sablonu-dans.html](mail-sablonu-dans.html), VeDans örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Okullara gönderim onay bekliyor (23 aday: [sektor-dans.md](sektor-dans.md)).
