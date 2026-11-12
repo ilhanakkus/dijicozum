@@ -133,3 +133,27 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Stüdyo} için küçük 
 | 17 | Pera Pilates | perapilates@gmail.com | B | – |
 | 18 | Studio Love Pilates | info@studiolovepilates.com | B | – |
 | 19 | PiaForm | piaform@hotmail.com | B | – |
+
+### Veteriner klinikleri kampanyası: 12 Kasım 2026, 13:37–13:41 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Klinik} için küçük bir fikir: aşı zamanı gelen hastalar kaçmasın`. Şablon: [mail-sablonu-veteriner.html](mail-sablonu-veteriner.html). B grubunda açılış cümlesi "randevuları telefon, WhatsApp ya da form üzerinden aldığınızı gördüm." 17 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı. Liste: [sektor-veteriner.md](sektor-veteriner.md).
+
+| # | Klinik | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Ataşehir Veteriner Kliniği | info@atasehirveteriner.com | A | – |
+| 2 | Vet34 | iletisim@vet34.com | A | – |
+| 3 | Leylek Vet | info@leylekvet.com | A | – |
+| 4 | Papyon Veteriner | papyonveteriner@gmail.com | A | – |
+| 5 | Vetasgon Kartal Veteriner | info@vetasgonkartalveteriner.com | A | – |
+| 6 | Anemon Veteriner Kliniği | info@anemonveteriner.com | A | – |
+| 7 | Heka Veteriner Kliniği | hekavet@gmail.com | A | – |
+| 8 | İstanbulVet | info@istvetklinik.com | A | – |
+| 9 | Kadıköy Veteriner | bilgi@kadikoyveteriner.net | A | – |
+| 10 | Apex Veteriner Kliniği | info@apexvet.com.tr | A | – |
+| 11 | Ortivet | info@ortivet.com | A | – |
+| 12 | Borvet | info@borvet.com | A | – |
+| 13 | Rönesans Veteriner | ronesansvet35@gmail.com | A | – |
+| 14 | Vetes Veteriner | hi@vetesveteriner.com | A | – |
+| 15 | Vetrium Hayvan Hastanesi | info@ankaravetrium.com | A | – |
+| 16 | Anatolia Hayvan Hastanesi | anatolia@anatoliapet.com | B | – |
+| 17 | Vega Veteriner Kliniği | bilgi@vegaveterinerklinigi.com | B | – |
