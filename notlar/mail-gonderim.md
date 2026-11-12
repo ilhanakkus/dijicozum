@@ -30,3 +30,30 @@ Demo olarak ilhanakkus@gmail.com'a gönderildi ve beğenildi. Bu formatı deği�
 | 28 Eyl 2026 | Filiz Karslıoğlu Cilt Atölyesi | Eski, görselsiz metin. Yanıt yok. |
 | 12 Kas 2026 | ilhanakkus@gmail.com | Onaylı formatın demosu. |
 | 12 Kas 2026 | ilhanakkus@gmail.com | Diş şablonunun demosu (Mithatpaşa Dent örneğiyle, A grubu cümlesi). |
+
+### Diş klinikleri kampanyası: 12 Kasım 2026, 10:47–10:51 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Klinik} için küçük bir fikir: boş kalan koltuklar azalsın`. 18 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı.
+
+| # | Klinik | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Mithatpaşa Dent | info@mithatpasadent.com | A | – |
+| 2 | Minedent | iletisim@minedent.net | A | – |
+| 3 | Dentaplant | info@dentaplant.com.tr | A | – |
+| 4 | MDC Diş | iletisim@mdcdent.com | A | – |
+| 5 | ÖzbuDent | info@ozbudent.com | A | – |
+| 6 | Yenitepe Diş | yenitepedis@gmail.com | A | – |
+| 7 | Eyrice Diş | info@eyricedis.com | A | – |
+| 8 | DentRoyal | info@dentroyalclinic.com | B | – |
+| 9 | DentisLife | info@dentislife.com | B | – |
+| 10 | Dent Oran | info@dentoran.com | B | – |
+| 11 | Ersöz Diş | info@ersozdis.com | B | – |
+| 12 | Arıdent | info@arident.com.tr | B | – |
+| 13 | Dentsahil | iletisim@dentsahil.com | B | – |
+| 14 | DentAtaşehir | info@dentatasehir.com | B | – |
+| 15 | İzmir Dental Klinik | bilgi@izmirdisklinik.com | B | – |
+| 16 | Evrensel Diş | info@evrenseldis.com.tr | B | – |
+| 17 | DentLeon | info@dentleon.com | B | – |
+| 18 | OPC Klinik | info@opcklinik.com | B | – |
+
+Yanıt takibi: Gmail'de `to:merhaba@dijicozum.com` + bu alan adlarından gelen mailler ve "boş kalan koltuklar" konulu yanıtlar; ayrıca geri dönen (bounce) mailler.
