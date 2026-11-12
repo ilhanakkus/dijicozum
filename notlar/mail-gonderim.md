@@ -173,7 +173,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük b
 | 5 | Clinika Estetik | info@clinikaestetik.com | A | – |
 | 6 | Bakırköy Lazer | info@bakirkoylazer.com | A | – |
 | 7 | MediDerm | info@mediderm.com.tr | A | – |
-| 8 | Novar Poliklinik | info@novarpoliklinik.com | A | – |
+| 8 | Novar Poliklinik | info@novarpoliklinik.com | A | 12 Kas: Otomatik yanıt ("gönderiniz ulaştı, ilgili departman dönecek"); gerçek yanıt bekleniyor |
 | 9 | Dr. Beauty Laser | info@drbeautylaser.com | A | – |
 | 10 | Aslı Eralp Lazer ve Güzellik | doktoraslieralp@gmail.com | B | – |
 | 11 | Kent Güzellik Merkezi | kentguzellikbursa@hotmail.com | B | – |
