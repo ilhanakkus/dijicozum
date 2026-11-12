@@ -263,4 +263,34 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: 
 
 ### Dans okulları: demo kopyası (12 Kasım 2026)
 
-Şablon [mail-sablonu-dans.html](mail-sablonu-dans.html), VeDans örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Okullara gönderim onay bekliyor (23 aday: [sektor-dans.md](sektor-dans.md)).
+Şablon [mail-sablonu-dans.html](mail-sablonu-dans.html), VeDans örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-dans.md](sektor-dans.md).
+
+### Dans okulları kampanyası: 12 Kasım 2026, 16:05–16:10 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: `{Okul} için küçük bir fikir: özel dersler WhatsApp'tan çıksın`. 23 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı.
+
+| # | Okul | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | VeDans | info@vedans.com | A | |
+| 2 | Dans Akademi | info@dansakademi.com.tr | A | |
+| 3 | X Dans Akademi | bilgi@xdans.com | A | |
+| 4 | ODADans | info@odadans.com | A | |
+| 5 | Mavidans | bilgi@mavidans.com | A | |
+| 6 | YUA Dans Atölyesi | yuadansatolyesi@gmail.com | A | |
+| 7 | Büşra & Emek Dans Akademi | info@bedansakademi.com | A | |
+| 8 | Havana Studio | info@havanastudio.com.tr | A | |
+| 9 | Tolga Han Dans | info@tolgahandansbahcesehir.com | A | |
+| 10 | Tango Nar | info@tangonar.com | A | |
+| 11 | Flex Dans Akademi | info@flexakademi.com | A | |
+| 12 | Trio Dans Akademisi | triodans@gmail.com | A | |
+| 13 | Salsa Ankara Dans | info@salsaankaradans.com.tr | A | |
+| 14 | Mady Dans Okulları | info@madydans.com | A | |
+| 15 | Yumlu Akademi | info@yumluakademi.com | A | |
+| 16 | İzmir Dans Atölyesi | izmirdansatolyesi@gmail.com | A | |
+| 17 | Aura Sahne Sanatları | aurasahnesanatlari@gmail.com | A | |
+| 18 | Viadance | infoviadance@gmail.com | A | |
+| 19 | Nüans Dans ve Sanat Evi | info@nuansdans.com.tr | A | |
+| 20 | Eskişehir Danset | danseteskisehir26@gmail.com | A | |
+| 21 | Yıldız Dans Akademi | info@yildizdansakademi.com | B | |
+| 22 | Stüdyo Dans & Bale | info@studyodansbale.com | B | |
+| 23 | Max Dance Studio | maxdance@maxdance.com.tr | B | |
