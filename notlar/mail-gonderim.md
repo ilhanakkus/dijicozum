@@ -206,4 +206,29 @@ Yanıt takibi: "kontrol zamanı gelen hastalar" konulu yanıtlar, bu alan adlar�
 
 ### Tenis kulüpleri: demo kopyası (12 Kasım 2026)
 
-Şablon [mail-sablonu-tenis.html](mail-sablonu-tenis.html), Maçka Tenis örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. İşletmelere gönderim onay bekliyor (18 aday: [sektor-tenis.md](sektor-tenis.md)).
+Şablon [mail-sablonu-tenis.html](mail-sablonu-tenis.html), Maçka Tenis örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-tenis.md](sektor-tenis.md).
+
+### Tenis kulüpleri ve okulları kampanyası: 12 Kasım 2026, 15:11–15:15 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: `{İşletme} için küçük bir fikir: kort ve dersler WhatsApp'tan çıksın`. 18 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı.
+
+| # | İşletme | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Özel Tenis Kursu | info@ozelteniskursu.com | A | |
+| 2 | Tennis Club | info@tennisclub.com.tr | A | |
+| 3 | Performans Tenis Akademisi | info@pta.com.tr | A | |
+| 4 | Maçka Tenis | mackatenis@gmail.com | A | |
+| 5 | Genç Tenis Akademisi | info@genctenisakademi.com | A | |
+| 6 | Optimum Tenis Akademisi | info@optimumtenis.com.tr | A | |
+| 7 | Metropol Tenis Akademi | info@metropoltenisakademi.com | A | |
+| 8 | BTA Tenis Akademisi | bilgi@basaksehirtenis.com | A | |
+| 9 | Koşuyolu Tenis Kursu | bilgi@teniskursu.com.tr | A | |
+| 10 | Ataşehir Tenis Akademisi | bilgi@atasehirtenisakademisi.com.tr | A | |
+| 11 | Atmaca Tenis Akademi | info@atatenis.com.tr | A | |
+| 12 | Çayyolu Tenis Kursu | can@cayyolutenis.com | A | |
+| 13 | İncek Tennis Plus | incektennisplus@gmail.com | A | |
+| 14 | İzmir Tenis Okulu | teniscioguz@gmail.com | A | |
+| 15 | Bornova Tenis Kursu | destek@bornovatenis.com | A | |
+| 16 | Tenis Atölyesi Akademi | info@tenisatolyesi.com | A | |
+| 17 | Efor Tenis Kulübü | info@efortenis.com | A | |
+| 18 | LD Tenis Okulları | info@ldtenis.com | A | |
