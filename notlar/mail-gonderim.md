@@ -29,3 +29,4 @@ Demo olarak ilhanakkus@gmail.com'a gönderildi ve beğenildi. Bu formatı deği�
 |---|---|---|
 | 28 Eyl 2026 | Filiz Karslıoğlu Cilt Atölyesi | Eski, görselsiz metin. Yanıt yok. |
 | 12 Kas 2026 | ilhanakkus@gmail.com | Onaylı formatın demosu. |
+| 12 Kas 2026 | ilhanakkus@gmail.com | Diş şablonunun demosu (Mithatpaşa Dent örneğiyle, A grubu cümlesi). |
