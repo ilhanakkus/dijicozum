@@ -62,6 +62,8 @@ Fizyoterapi şablonunun demosu: 12 Kas 2026, ilhanakkus@gmail.com (Ataşehir Fiz
 
 Pilates şablonunun demosu: 12 Kas 2026, ilhanakkus@gmail.com (Zeo Pilates örneğiyle, A grubu cümlesi).
 
+Veteriner şablonunun demosu: 12 Kas 2026, ilhanakkus@gmail.com (İstanbulVet örneğiyle, A grubu cümlesi).
+
 ### Güzellik merkezleri kampanyası: 12 Kasım 2026, 11:03–11:06 (TSİ)
 
 Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Salon} için küçük bir fikir: randevular kendiliğinden gelsin`. Onaylı güzellik şablonu; B grubunda açılış cümlesi "randevu taleplerini formla alıp sonra arayarak onayladığınızı gördüm." 14 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı. Liste: [sektor-guzellik-merkezleri.md](sektor-guzellik-merkezleri.md).
