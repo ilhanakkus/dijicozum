@@ -203,3 +203,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: 
 | 13 | Neva İşitme | info@nevaisitme.com | B | |
 
 Yanıt takibi: "kontrol zamanı gelen hastalar" konulu yanıtlar, bu alan adlarından gelen mailler ve geri dönenler.
+
+### Tenis kulüpleri: demo kopyası (12 Kasım 2026)
+
+Şablon [mail-sablonu-tenis.html](mail-sablonu-tenis.html), Maçka Tenis örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. İşletmelere gönderim onay bekliyor (18 aday: [sektor-tenis.md](sektor-tenis.md)).
