@@ -80,3 +80,26 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Salon} için küçük bi
 | 12 | Sevil Muradova Güzellik Merkezi | info@sevilmuradova.com | B | – |
 | 13 | Lima Estetik | info@limaestetik.com | B | – |
 | 14 | Evolusi Güzellik | info@evolusiguzellik.com | B | – |
+
+### Fizyoterapi merkezleri kampanyası: 12 Kasım 2026, 12:22–12:24 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük bir fikir: yarıda kalan seanslar azalsın`. Şablon: [mail-sablonu-fizyo.html](mail-sablonu-fizyo.html). 16 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı. Liste: [sektor-fizyoterapi.md](sektor-fizyoterapi.md).
+
+| # | Merkez | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Ataşehir Fizik Tedavi | info@atasehirfiziktedavi.com | A | – |
+| 2 | M Terapi | mterapi@outlook.com | A | – |
+| 3 | Ulus Fizyoterapi | info@ulusfizyoterapi.com | A | – |
+| 4 | Fizyonef | info@nefizyoterapi.com | A | – |
+| 5 | Diafiz | info@diafiz.com | A | – |
+| 6 | Borfiz | bilgi@borfiz.com.tr | A | – |
+| 7 | Nilüfer Fizyoterapi | info@niluferfizyoterapi.com | A | – |
+| 8 | Fizyovela | info@fizyovela.com | A | 12 Kas: Geri döndü (adres yok). Sitede ayrıca fizyovela@gmail.com yazıyor. |
+| 9 | FizyoSuite | bilgi@fizyosuite.com | A | – |
+| 10 | Maltepe Fizik Tedavi | maltepefiziktedavi06@gmail.com | A | – |
+| 11 | Enerji Tıp Merkezi | bilgi@enerjitipmerkezi.com | A | – |
+| 12 | Fzt. Fatma Aslan | info@fizyoterapistfatmaaslan.com | A | – |
+| 13 | Atafiz | info@atafiz.com | B | – |
+| 14 | Akdeniz Deva | info@akdenizdeva.com | B | – |
+| 15 | FizyoNatural | fizyonatural@gmail.com | B | – |
+| 16 | Yusuf Onkol Fizik Tedavi | info@yusufonkol.com | B | – |
