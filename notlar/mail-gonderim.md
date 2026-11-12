@@ -105,3 +105,29 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük b
 | 14 | Akdeniz Deva | info@akdenizdeva.com | B | – |
 | 15 | FizyoNatural | fizyonatural@gmail.com | B | – |
 | 16 | Yusuf Onkol Fizik Tedavi | info@yusufonkol.com | B | – |
+
+### Pilates stüdyoları kampanyası: 12 Kasım 2026, 13:05–13:09 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Stüdyo} için küçük bir fikir: ders programı WhatsApp'tan çıksın`. Şablon: [mail-sablonu-pilates.html](mail-sablonu-pilates.html). B grubunda açılış cümlesi "rezervasyonları telefon, WhatsApp ya da form üzerinden aldığınızı gördüm." 19 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı. Liste: [sektor-pilates.md](sektor-pilates.md).
+
+| # | Stüdyo | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Terapilates | info@terapilates.com.tr | A | – |
+| 2 | Zeo Pilates | info@zeopilates.com | A | – |
+| 3 | Naura Pilates Studio | info@naurapilates.com.tr | A | – |
+| 4 | RiseUp Pilates | iletisim@riseuppilates.com | A | 12 Kas: Geri döndü (adres yok; e-posta alan adı sitenin riseup-pilates.com adresinden farklı) |
+| 5 | Burcu Yanardağ Pilates | yanardag.burcu@hotmail.com | A | – |
+| 6 | Gen Pilates | bilgi@genpilates.com | A | – |
+| 7 | Plus Pilates | info@pluspilatespt.com | A | – |
+| 8 | Beşiktaş Stüdyo | bilgi@besiktasstudyo.com.tr | A | – |
+| 9 | The Cove Pilates | info@thecovepilates.com | A | – |
+| 10 | Slimlife Studio | info@slimlifestudio.com.tr | A | – |
+| 11 | Joya Studio | info@joyastudio.net | A | – |
+| 12 | Aqua Pilates | info@aquapilates.com.tr | A | – |
+| 13 | Ankara Pilates | info@ankarapilates.net | A | – |
+| 14 | Fizyofiplus | info@fizyofiplus.com | B | – |
+| 15 | Reformer İstanbul | bilgi@reformeristanbul.com | B | – |
+| 16 | Sun Reformer Pilates | sunreformerpilates@gmail.com | B | – |
+| 17 | Pera Pilates | perapilates@gmail.com | B | – |
+| 18 | Studio Love Pilates | info@studiolovepilates.com | B | – |
+| 19 | PiaForm | piaform@hotmail.com | B | – |
