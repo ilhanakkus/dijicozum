@@ -9,6 +9,8 @@ Demo olarak ilhanakkus@gmail.com'a gönderildi ve beğenildi. Bu formatı deği�
 - Görseller: `https://dijicozum.com/assets/mail/guzellik-hasta.jpg` ve `guzellik-panel.jpg` (maile gömülü değil, siteden yüklenir; site yayında olmalı)
 - Demo linki: `https://dijicozum.com/demo/randevu-guzellik?kn={{SALON_URL}}&utm_source=eposta&utm_medium=soguk3&utm_campaign=guzellik` (demo başlığında salonun adı görünür)
 
+**Diş klinikleri uyarlaması:** [mail-sablonu-dis.html](mail-sablonu-dis.html). Yapı aynı; görseller `randevu-hasta.jpg` / `randevu-panel.jpg` (diş demosu), link `demo/randevu-dis?kn=...&utm_campaign=dis-klinikleri`, konu `{{KLINIK}} için küçük bir fikir: boş kalan koltuklar azalsın`. Aday listesi: [sektor-dis-klinikleri.md](sektor-dis-klinikleri.md). A ve B grubu için gözlem cümlesi şablonun başında yazıyor.
+
 ## Doldururken
 
 - `{{SALON}}` = salon adı, `{{SALON_URL}}` = URL kodlanmış hali (boşluk `%20`).
