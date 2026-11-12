@@ -235,4 +235,28 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: 
 
 ### Binicilik kulüpleri: demo kopyası (12 Kasım 2026)
 
-Şablon [mail-sablonu-binicilik.html](mail-sablonu-binicilik.html), Akademi Binicilik Kulübü örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Not: konu pilates kampanyasıyla aynı ("ders programı WhatsApp'tan çıksın"); yanıt takibinde alan adına göre ayrılmalı. Kulüplere gönderim onay bekliyor (17 aday: [sektor-binicilik.md](sektor-binicilik.md)).
+Şablon [mail-sablonu-binicilik.html](mail-sablonu-binicilik.html), Akademi Binicilik Kulübü örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Not: konu pilates kampanyasıyla aynı ("ders programı WhatsApp'tan çıksın"); yanıt takibinde alan adına göre ayrılmalı. Aday listesi: [sektor-binicilik.md](sektor-binicilik.md).
+
+### Binicilik kulüpleri kampanyası: 12 Kasım 2026, 15:34–15:38 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: `{Kulüp} için küçük bir fikir: ders programı WhatsApp'tan çıksın` (pilates kampanyasıyla aynı konu; yanıtları alan adına göre ayırın). 17 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı.
+
+| # | Kulüp | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Anatolia Atlı Spor | anatoliaatlispor@gmail.com | A | |
+| 2 | Akademi Binicilik Kulübü | info@akademibinicilik.com.tr | A | |
+| 3 | Han Atlı Spor Kulübü | info@hanatlisporkulubu.com | A | |
+| 4 | İshaklı Atlı Spor | ishakliatlispor@gmail.com | A | |
+| 5 | Avcılar Binicilik | mehyurda@gmail.com | A | |
+| 6 | İstanbul Binicilik Kulübü | info@istanbulbinicilik.com | A | |
+| 7 | Valmenti Equestrian | info@valmentiequestrian.com | A | |
+| 8 | Hara Atlı Spor Kulübü | info@harabinicilik.com | A | |
+| 9 | Manej Urla | hello@manejurla.com | A | |
+| 10 | Bursa Atlı Spor Kulübü | info@bursaatlispor.com | A | |
+| 11 | Antalya At Çiftliği | info@antalyaatciftligi.com | A | |
+| 12 | Güçlübey Binicilik Merkezi | info@guclubey.com.tr | A | |
+| 13 | Hayberk Country Club | bilgi@hayberk.com | A | |
+| 14 | Çankaya Binicilik | info@cankayabinicilik.com | B | |
+| 15 | Polo Binicilik | info@polobinicilik.com.tr | B | |
+| 16 | Doğuşlu Binicilik Kulübü | info@doguslubinicilik.com | B | |
+| 17 | Uludağ Binicilik | info@uludagbinicilik.com | B | |
