@@ -282,6 +282,16 @@ function show(view) {
 }
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>show(t.dataset.view)));
 render();
+
+/* Salona özel başlık: ?kn=Salon Adı */
+(function(){try{
+  var n=(new URLSearchParams(location.search).get('kn')||'').trim().slice(0,70);
+  if(!n)return;
+  var h=document.querySelector('.brand h1'),p=document.querySelector('.brand p');
+  if(h)h.textContent=n;
+  if(p)p.textContent='Randevu sistemi örneği · '+n+' için hazırlanmıştır';
+  document.title=n+' | Randevu Sistemi Örneği';
+}catch(e){}})();
 </script>
 </body>
 </html>
