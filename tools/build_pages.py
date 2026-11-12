@@ -215,6 +215,11 @@ PROBLEMS = {
 DEMOS = {
     "tr": [
         ("randevu", "Randevu", "Kuaför randevu sistemi", "Müşteri saati seçer. Randevu hemen sizin panelinize düşer.", "/demo/randevu"),
+        ("randevu", "Randevu", "Güzellik merkezi randevu sistemi", "Hizmet, uzman ve saat seçimi; randevudan önce SMS hatırlatma.", "/demo/randevu-guzellik"),
+        ("randevu", "Randevu", "Diş kliniği randevu sistemi", "Hasta işlemi ve hekimi seçer; boş kalan koltuk azalır.", "/demo/randevu-dis"),
+        ("randevu", "Randevu", "Fizik tedavi randevu sistemi", "Seans takibi: her hastanın kaçıncı seansta olduğu ve hatırlatmalar.", "/demo/randevu-fizyoterapi"),
+        ("randevu", "Randevu", "Pilates stüdyosu rezervasyonu", "Ders, eğitmen ve saat seçimi; paketinde kalan ders sayısı.", "/demo/randevu-pilates"),
+        ("randevu", "Randevu", "Veteriner kliniği randevu sistemi", "Aşı zamanı gelen hayvanın sahibine otomatik hatırlatma.", "/demo/randevu-veteriner"),
         ("siparis", "Sipariş", "Restoran sipariş sistemi", "Masadan QR okutulur, sipariş mutfak ekranına düşer.", "/demo/siparis"),
         ("asistan", "Yapay zeka", "Müşteri asistanı", "Fiyat ve saat sorularını cevaplar, randevu isteğini toplar.", "/demo/asistan"),
         ("uygulama", "Telefon uygulaması", "Spor salonu uygulaması", "Ders programı, QR kart ve bildirimler.", "/demo/uygulama"),
@@ -222,6 +227,11 @@ DEMOS = {
     ],
     "en": [
         ("randevu", "Booking", "Hairdresser booking system", "Customer picks a time. The booking lands in your panel right away.", "/demo/randevu"),
+        ("randevu", "Booking", "Beauty salon booking (Turkish)", "Service, specialist and time; SMS reminder before the visit.", "/demo/randevu-guzellik"),
+        ("randevu", "Booking", "Dental clinic booking (Turkish)", "Patients pick the treatment and dentist; fewer empty chairs.", "/demo/randevu-dis"),
+        ("randevu", "Booking", "Physiotherapy booking (Turkish)", "Session tracking: which session each patient is on, plus reminders.", "/demo/randevu-fizyoterapi"),
+        ("randevu", "Booking", "Pilates studio booking (Turkish)", "Class, instructor and time; lessons left in each package.", "/demo/randevu-pilates"),
+        ("randevu", "Booking", "Vet clinic booking (Turkish)", "Automatic reminder to owners when a vaccine is due.", "/demo/randevu-veteriner"),
         ("siparis", "Ordering", "Restaurant ordering system", "Scan the QR code at the table, the order lands on the kitchen screen.", "/demo/siparis"),
         ("asistan", "AI", "Customer assistant", "Answers price and hours questions, collects booking requests.", "/demo/asistan"),
         ("uygulama", "Phone app", "Gym app", "Class schedule, QR card and notifications.", "/demo/uygulama"),
