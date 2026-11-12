@@ -159,3 +159,21 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Klinik} için küçük b
 | 15 | Vetrium Hayvan Hastanesi | info@ankaravetrium.com | A | – |
 | 16 | Anatolia Hayvan Hastanesi | anatolia@anatoliapet.com | B | – |
 | 17 | Vega Veteriner Kliniği | bilgi@vegaveterinerklinigi.com | B | – |
+
+### Lazer epilasyon ve medikal estetik kampanyası: 12 Kasım 2026, 13:53–13:56 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük bir fikir: seans paketleri yarıda kalmasın`. Şablon: [mail-sablonu-lazer.html](mail-sablonu-lazer.html). B grubunda açılış cümlesi "randevuları telefon, WhatsApp ya da form üzerinden aldığınızı gördüm." 11 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı. Liste: [sektor-lazer.md](sektor-lazer.md).
+
+| # | Merkez | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Ata Estetik | info@ataestetik.com | A | – |
+| 2 | Ankara Lazer | ankaralazer@gmail.com | A | – |
+| 3 | Laserlab | iletisim@laserlab.tr | A | – |
+| 4 | Million Hair Clinic | info@millionhairclinic.com | A | – |
+| 5 | Clinika Estetik | info@clinikaestetik.com | A | – |
+| 6 | Bakırköy Lazer | info@bakirkoylazer.com | A | – |
+| 7 | MediDerm | info@mediderm.com.tr | A | – |
+| 8 | Novar Poliklinik | info@novarpoliklinik.com | A | – |
+| 9 | Dr. Beauty Laser | info@drbeautylaser.com | A | – |
+| 10 | Aslı Eralp Lazer ve Güzellik | doktoraslieralp@gmail.com | B | – |
+| 11 | Kent Güzellik Merkezi | kentguzellikbursa@hotmail.com | B | – |
