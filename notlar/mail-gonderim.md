@@ -57,3 +57,24 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Klinik} için küçük b
 | 18 | OPC Klinik | info@opcklinik.com | B | – |
 
 Yanıt takibi: Gmail'de `to:merhaba@dijicozum.com` + bu alan adlarından gelen mailler ve "boş kalan koltuklar" konulu yanıtlar; ayrıca geri dönen (bounce) mailler.
+
+### Güzellik merkezleri kampanyası: 12 Kasım 2026, 11:03–11:06 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Salon} için küçük bir fikir: randevular kendiliğinden gelsin`. Onaylı güzellik şablonu; B grubunda açılış cümlesi "randevu taleplerini formla alıp sonra arayarak onayladığınızı gördüm." 14 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı. Liste: [sektor-guzellik-merkezleri.md](sektor-guzellik-merkezleri.md).
+
+| # | Salon | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | New You Güzellik Merkezi | newyou.guzellik@gmail.com | A | – |
+| 2 | Talin Güzellik Merkezi | info@talinguzellikmerkezi.com | A | – |
+| 3 | Kadıköy Güzellik Merkezi | info@kadikoyguzellikmerkezi.com | A | – |
+| 4 | Mabel Güzellik | randevu@mabelguzelliksalonu.com | A | – |
+| 5 | Dermopark VIP | info@dermoparkvip.com | A | – |
+| 6 | Dore Güzellik | info@doreguzellikeskisehir.com | A | – |
+| 7 | Este Lórien | info@estelorien.com.tr | A | – |
+| 8 | Mediplast Güzellik Merkezi | info@mediplast.com.tr | A | – |
+| 9 | Derma Lazer | info@dermalazer.com | A | – |
+| 10 | Başakşehir Beauty | info@basaksehirbeauty.com | A | – |
+| 11 | Tülay Kalmaz Beauty Center | kalmaztulay@gmail.com | A | – |
+| 12 | Sevil Muradova Güzellik Merkezi | info@sevilmuradova.com | B | – |
+| 13 | Lima Estetik | info@limaestetik.com | B | – |
+| 14 | Evolusi Güzellik | info@evolusiguzellik.com | B | – |
