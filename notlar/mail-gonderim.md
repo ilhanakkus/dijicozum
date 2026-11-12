@@ -294,3 +294,45 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: 
 | 21 | Yıldız Dans Akademi | info@yildizdansakademi.com | B | |
 | 22 | Stüdyo Dans & Bale | info@studyodansbale.com | B | |
 | 23 | Max Dance Studio | maxdance@maxdance.com.tr | B | |
+
+### Dalış okulları: demo kopyası (12 Kasım 2026)
+
+Şablon [mail-sablonu-dalis.html](mail-sablonu-dalis.html), "Örnek Dalış Okulu" ile doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-dalis.md](sektor-dalis.md).
+
+### Dalış okulları kampanyası: 12 Kasım 2026, 19:33–19:42 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web, tam ekran yazma sayfası; alıcı adres satırından). Konu: `{Okul} için küçük bir fikir: kurs ve tekne kayıtları WhatsApp'tan çıksın`. 31 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı.
+
+| # | Okul | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Bahçeşehir Diving | info@bahcesehirdiving.com | A | |
+| 2 | Arden Diving | ardendiving@gmail.com | A | |
+| 3 | Ayışığı Diving | info@ayisigidiving.com | A | |
+| 4 | Divepark Gökçeada | info@divepark.net | A | |
+| 5 | Stingray Diving | info@stingraydiving.com | A | |
+| 6 | Yunus Diving | info@yunusdiving.com | A | |
+| 7 | Turkuaz Dive Center | info@turkuazdivecenter.com | A | |
+| 8 | Duck Dalış Merkezi | duckdalismerkezi@gmail.com | A | |
+| 9 | Rota Dalış Merkezi | info@rotadalismerkezi.com | A | |
+| 10 | Dive Academy Bodrum | diveacademybodrum@gmail.com | A | |
+| 11 | Diving Kaleiçi | info@divingkaleici.com | A | |
+| 12 | ScubaDo | info@scubado.com.tr | A | |
+| 13 | Bougainville | info@bougainville.com.tr | A | |
+| 14 | Octopus Kemer | ali@octopus-kemer.com | A | |
+| 15 | Kalkan Dive Centre | info@kalkandiving.com | A | |
+| 16 | The Divers' Club | info@thediversclub.com.tr | A | |
+| 17 | Marmaris Dalış Merkezi | info@marmarisdc.com | A | |
+| 18 | Marmara Sualtı Merkezi | marmarasualti@gmail.com | A | |
+| 19 | Fethiye Diving Centre | fethiyedivingcentre@gmail.com | A | |
+| 20 | Egesub | info@egesub.com | A | |
+| 21 | Nereids Dalış Merkezi | sualti@nereidsdalismerkezi.com | A | |
+| 22 | Antalya Scuba Diving | info@antalyascubadiving.com | A | |
+| 23 | Motif Dalış Merkezi | info@motifdalis.com | A | |
+| 24 | Guru Dive | info@gurudive.com | A | |
+| 25 | İbrice Dalış Merkezi | iletisim@ibricedalismerkezi.com | A | |
+| 26 | Mavi İnci Dalış | maviincidalis@maviincidalis.com | A | |
+| 27 | Kanyon Diving | kanyondiving@gmail.com | B | |
+| 28 | Elite Diving Centre | info@elitedivingcentre.com | B | |
+| 29 | Lykia World Diving Centre | info@lykiaworlddivingcentre.com | B | |
+| 30 | Alien Diving Academy | info@aliendivingacademy.com | B | |
+| 31 | Mermaid Diving Club | info@mermaiddivingclub.com | B | |
