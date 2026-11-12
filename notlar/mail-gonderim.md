@@ -180,4 +180,26 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük b
 
 ### İşitme cihazı merkezleri: demo kopyası (12 Kasım 2026)
 
-Şablon [mail-sablonu-isitme.html](mail-sablonu-isitme.html), Duyses İşitme örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Merkezlere gönderim onay bekliyor (13 aday: [sektor-isitme.md](sektor-isitme.md)).
+Şablon [mail-sablonu-isitme.html](mail-sablonu-isitme.html), Duyses İşitme örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-isitme.md](sektor-isitme.md).
+
+### İşitme cihazı merkezleri kampanyası: 12 Kasım 2026, 14:27–14:32 (TSİ)
+
+Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: `{Merkez} için küçük bir fikir: kontrol zamanı gelen hastalar kaçmasın`. 13 mail, her biri tek alıcılı; gönderilmiş klasöründe doğrulandı.
+
+| # | Merkez | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | Duyses İşitme | info@duyses.com.tr | A | |
+| 2 | İyi Duy İşitme | iyiduyisitme@gmail.com | A | |
+| 3 | Başkent Ses İşitme | baskentsesisitme@gmail.com | A | |
+| 4 | Frekans İşitme | frekansisitmemerkezi@gmail.com | A | |
+| 5 | Nokta İşitme | bilgi@noktaisitme.com | A | |
+| 6 | Ege İşitme Cihazları | info@egeisitmecihazlari.com | A | |
+| 7 | Sesplus İşitme | info@sesplus.com.tr | A | |
+| 8 | Antalya İşitme Cihazları Merkezi | info@antalyaisitme.com | A | |
+| 9 | Diyalog İşitme | diyalogisitme@gmail.com | A | |
+| 10 | İstanbul İşitme Merkezi | info@istanbulisitme.com | A | |
+| 11 | Uzman İşitme Merkezi | bakirkoy@uzmanisitme.com.tr | A | |
+| 12 | Teta Ses | info@tetases.com.tr | B | |
+| 13 | Neva İşitme | info@nevaisitme.com | B | |
+
+Yanıt takibi: "kontrol zamanı gelen hastalar" konulu yanıtlar, bu alan adlarından gelen mailler ve geri dönenler.
