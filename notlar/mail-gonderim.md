@@ -177,3 +177,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük b
 | 9 | Dr. Beauty Laser | info@drbeautylaser.com | A | – |
 | 10 | Aslı Eralp Lazer ve Güzellik | doktoraslieralp@gmail.com | B | – |
 | 11 | Kent Güzellik Merkezi | kentguzellikbursa@hotmail.com | B | – |
+
+### İşitme cihazı merkezleri: demo kopyası (12 Kasım 2026)
+
+Şablon [mail-sablonu-isitme.html](mail-sablonu-isitme.html), Duyses İşitme örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Merkezlere gönderim onay bekliyor (13 aday: [sektor-isitme.md](sektor-isitme.md)).
