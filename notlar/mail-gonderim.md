@@ -403,3 +403,26 @@ Yanıt takibine eklendi (13 kampanya, 234 işletme).
 ### Oto detailing: demo kopyası (13 Kasım 2026)
 
 Şablon [mail-sablonu-detailing.html](mail-sablonu-detailing.html), Automix Detailing örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-detailing.md](sektor-detailing.md) (14 stüdyo, hepsi A).
+
+### Kampanya 14: oto detailing (13 Kasım 2026, 13:05–13:09 TSİ)
+
+Şablon [mail-sablonu-detailing.html](mail-sablonu-detailing.html); `merhaba@dijicozum.com` adresinden Gmail web (tam ekran yazma, `to=` ile; uygulama tarayıcısı kapalı olduğu için Chrome üzerinden) gönderildi, her biri tek alıcı, 14/14 gönderilmiş klasöründe doğrulandı. Konu: "{Stüdyo} için küçük bir fikir: araç randevuları WhatsApp'tan çıksın".
+
+| # | Stüdyo | Alıcı | Grup |
+|---|---|---|---|
+| 1 | Pendik Auto Detailing | info@pendikautodetailing.com | A |
+| 2 | X10 Car Detailing | x10detailing@gmail.com | A |
+| 3 | Car City Detailing | info@carcitydetailing.com | A |
+| 4 | Enkar Garage | enkargarage@gmail.com | A |
+| 5 | İstanbul Araç Seramik Kaplama | info@istanbularacseramikkaplama.com | A |
+| 6 | Automix Detailing | info@automix.tr | A |
+| 7 | Çankaya Garage | info@cankayagarage.com | A |
+| 8 | DBY Detailing | dbydetailing@gmail.com | A |
+| 9 | CS Detailing | info@izmirdetailing.com | A |
+| 10 | İzmir PPF Merkezi | info@izmirppfmerkezi.com | A |
+| 11 | Finish Auto Detailing | info@finishautodetailing.com | A |
+| 12 | BeCar Studio | becarstudio.tr@gmail.com | A |
+| 13 | Master Garage | info@mastergarage.com.tr | A |
+| 14 | Mersin Çizik Onarım | iletisim@mersincizikonarim.com | A |
+
+Yanıt takibine eklendi (14 kampanya, 248 işletme).
