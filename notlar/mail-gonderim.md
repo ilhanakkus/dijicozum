@@ -399,3 +399,7 @@ Yanıt takibine eklendi (12 kampanya, 210 işletme).
 | 24 | Mia Psikoloji | bilgi@miapsikolojibursa.com | A |
 
 Yanıt takibine eklendi (13 kampanya, 234 işletme).
+
+### Oto detailing: demo kopyası (13 Kasım 2026)
+
+Şablon [mail-sablonu-detailing.html](mail-sablonu-detailing.html), Automix Detailing örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-detailing.md](sektor-detailing.md) (14 stüdyo, hepsi A).
