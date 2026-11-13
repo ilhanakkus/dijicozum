@@ -340,3 +340,25 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, tam ekran yazma sayfası; alıcı
 ### Pet kuaförleri: demo kopyası (13 Kasım 2026)
 
 Şablon [mail-sablonu-pet.html](mail-sablonu-pet.html), Petzz Pet Kuaför örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-pet.md](sektor-pet.md) (13 salon: 12 A, 1 B).
+
+### Kampanya 12: pet kuaförleri (13 Kasım 2026, 12:00–12:03 TSİ)
+
+Şablon [mail-sablonu-pet.html](mail-sablonu-pet.html); `merhaba@dijicozum.com` adresinden Gmail web (tam ekran yazma, `to=` ile) gönderildi, her biri tek alıcı, 13/13 gönderilmiş klasöründe doğrulandı. Konu: "{Salon} için küçük bir fikir: bakım randevuları WhatsApp'tan çıksın".
+
+| # | Salon | Alıcı | Grup |
+|---|---|---|---|
+| 1 | Petzz Pet Kuaför | info@petzzkuafor.com | A |
+| 2 | Patice Pet Kuaför | bilgi@paticepetkuafor.com | A |
+| 3 | Pink Pouf Pet Kuaför | bilgi@pinkpouf.com | A |
+| 4 | Hachiko Pet Coiffeur & Spa | info@elifiremhachiko.com | A |
+| 5 | Şirine Pet Kuaför | info@sirinepetkuafor.com | B |
+| 6 | Bee Pet Kuaför | petgroomerebru@gmail.com | A |
+| 7 | Kabarcık Patiler Pet Kuaförü | info@kabarcikpatiler.com | A |
+| 8 | Patiş Pet Kuaför | patispetkuafor@gmail.com | A |
+| 9 | Patipet Kuaför | info@patipetkuafor.com | A |
+| 10 | Pawty Pet Kuaförü | info@pawtypetkuafor.com | A |
+| 11 | Norveç Pet Kuaför | info@norvecpet.com.tr | A |
+| 12 | Mutlu Patiler | iletisim@mutlupatilerbursa.com | A |
+| 13 | Pet Kuaför Ezgi | info@petkuaforezgi.com | A |
+
+Yanıt takibine eklendi (12 kampanya, 210 işletme).
