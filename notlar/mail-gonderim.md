@@ -336,3 +336,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, tam ekran yazma sayfası; alıcı
 | 29 | Lykia World Diving Centre | info@lykiaworlddivingcentre.com | B | |
 | 30 | Alien Diving Academy | info@aliendivingacademy.com | B | |
 | 31 | Mermaid Diving Club | info@mermaiddivingclub.com | B | |
+
+### Pet kuaförleri: demo kopyası (13 Kasım 2026)
+
+Şablon [mail-sablonu-pet.html](mail-sablonu-pet.html), Petzz Pet Kuaför örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-pet.md](sektor-pet.md) (13 salon: 12 A, 1 B).
