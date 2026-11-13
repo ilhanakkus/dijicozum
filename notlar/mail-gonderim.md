@@ -430,3 +430,25 @@ Yanıt takibine eklendi (14 kampanya, 248 işletme).
 ### Dil kursları: demo kopyası (13 Kasım 2026)
 
 Şablon [mail-sablonu-dil.html](mail-sablonu-dil.html), SDM Dil Okulu örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web, Chrome) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-dil.md](sektor-dil.md) (13 kurs, hepsi A).
+
+### Kampanya 15: dil kursları (13 Kasım 2026, 14:10–14:14 TSİ)
+
+Şablon [mail-sablonu-dil.html](mail-sablonu-dil.html); `merhaba@dijicozum.com` adresinden Gmail web (tam ekran yazma, `to=` ile, Chrome) gönderildi, her biri tek alıcı, 13/13 gönderilmiş klasöründe doğrulandı. Konu: "{Kurs} için küçük bir fikir: ders randevuları WhatsApp'tan çıksın".
+
+| # | Kurs | Alıcı | Grup |
+|---|---|---|---|
+| 1 | SDM Dil Okulu | info@sdm.com.tr | A |
+| 2 | Yabancıdan Özel Ders | bilgi@yabancidanozelders.com | A |
+| 3 | Englishbox | bakirkoy@englishbox.com.tr | A |
+| 4 | İngiliz Akademi | info@ingilizakademi.com.tr | A |
+| 5 | Just English | info@justenglishtr.com | A |
+| 6 | Just For Speaking | info@justforspeaking.com | A |
+| 7 | TAÇ Yabancı Dil Kursu | info@kizilaytacdil.com | A |
+| 8 | IFB Türkiye | info@ifb-turkiye.com | A |
+| 9 | Bilişsel Akademi | info@bilisselakademi.com | A |
+| 10 | OYDEM Dil Okulları | oydem@oydem.com.tr | A |
+| 11 | Önder Dil Okulu | info@onderdil.com | A |
+| 12 | Language Zone | info@languagezone.com.tr | A |
+| 13 | British Express | antalyabritishexpress@gmail.com | A |
+
+Yanıt takibine eklendi (15 kampanya, 261 işletme).
