@@ -42,3 +42,7 @@ Tarama: işletmelerin kendi siteleri (`analyze.py` + Fresha/Wix Bookings/Doktort
 3. 20–30 merkez (İstanbul, Ankara, İzmir, Bursa, Antalya), siteden doğrulanmış.
 
 Yedek: oto detailing stüdyoları.
+
+## Güncelleme — 13 Kas 2026
+
+Psikoloji kampanyası gönderildi (24 merkez). Sıradaki sektör yedekteki **oto detailing** (seramik kaplama, pasta cila, PPF, iç temizlik). Demo: `demo/randevu-detailing` (hizmet, usta, saat; panelde araç, plaka, teslim saati). Aday listesi: [sektor-detailing.md](sektor-detailing.md).
