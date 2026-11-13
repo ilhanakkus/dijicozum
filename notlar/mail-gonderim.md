@@ -362,3 +362,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, tam ekran yazma sayfası; alıcı
 | 13 | Pet Kuaför Ezgi | info@petkuaforezgi.com | A |
 
 Yanıt takibine eklendi (12 kampanya, 210 işletme).
+
+### Psikoloji merkezleri: demo kopyası (13 Kasım 2026)
+
+Şablon [mail-sablonu-psikoloji.html](mail-sablonu-psikoloji.html), Ataşehir Psikoloji örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-psikoloji.md](sektor-psikoloji.md) (24 merkez: 23 A, 1 B).
