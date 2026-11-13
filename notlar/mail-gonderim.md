@@ -366,3 +366,36 @@ Yanıt takibine eklendi (12 kampanya, 210 işletme).
 ### Psikoloji merkezleri: demo kopyası (13 Kasım 2026)
 
 Şablon [mail-sablonu-psikoloji.html](mail-sablonu-psikoloji.html), Ataşehir Psikoloji örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-psikoloji.md](sektor-psikoloji.md) (24 merkez: 23 A, 1 B).
+
+### Kampanya 13: psikoloji merkezleri (13 Kasım 2026, 12:35–12:40 TSİ)
+
+Şablon [mail-sablonu-psikoloji.html](mail-sablonu-psikoloji.html); `merhaba@dijicozum.com` adresinden Gmail web (tam ekran yazma, `to=` ile) gönderildi, her biri tek alıcı, 24/24 gönderilmiş klasöründe doğrulandı. Konu: "{Merkez} için küçük bir fikir: seans randevuları WhatsApp'tan çıksın".
+
+| # | Merkez | Alıcı | Grup |
+|---|---|---|---|
+| 1 | Ataşehir Psikoloji | info@atasehirpsikoloji.com.tr | A |
+| 2 | Renas Psikoloji | info@renaspsikoloji.com | A |
+| 3 | Psikoterapi Atölyesi | merhaba@psikoterapiatolyesi.com.tr | A |
+| 4 | Kilya Psikoloji | info@kilyapsikoloji.com | A |
+| 5 | Kalamış Psikoloji | kalamispsikoloji@gmail.com | A |
+| 6 | Cem Gümüş Psikoloji | destek@cemgumus.com | A |
+| 7 | Psikoloji Bakırköy | info@psikolojibakirkoy.com.tr | A |
+| 8 | Onix Psikoloji | info@onixpsikoloji.com | A |
+| 9 | Şişli Terapi Enstitüsü | info@sisliterapi.com | A |
+| 10 | Üsküdar Psikoloji | info@uskudarpsikolog.org | A |
+| 11 | Özne Psikoloji | oznepsikoloji2024@gmail.com | A |
+| 12 | Aven Psikoloji | info@avenpsikoloji.com | A |
+| 13 | Rola Psikoloji | info@rolapsikoloji.com | A |
+| 14 | Ankara Psikolog Merkezi | info@ankarapsikologmerkezi.com | B |
+| 15 | İzmir Şans Psikoloji | izmirsanspsikoloji@gmail.com | A |
+| 16 | Eka Psikoloji | info@ekapsikoloji.com | A |
+| 17 | Yankı Psikoloji | destek@yankipsikoloji.com | A |
+| 18 | Dünya Danışma Merkezi | info@dunyadanismamerkezi.com | A |
+| 19 | Aybros Psikoloji | info@aybrospsikoloji.com | A |
+| 20 | İDA Psikoloji | bilgi@idapsikoloji.com | A |
+| 21 | Bornova Pedagog | psikolojiizmir@gmail.com | A |
+| 22 | Sade Psikoloji | info@sadepsikoloji.com.tr | A |
+| 23 | Bursa Pozitif Yaşam | bursapozitifyasam@gmail.com | A |
+| 24 | Mia Psikoloji | bilgi@miapsikolojibursa.com | A |
+
+Yanıt takibine eklendi (13 kampanya, 234 işletme).
