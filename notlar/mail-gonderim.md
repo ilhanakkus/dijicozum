@@ -426,3 +426,7 @@ Yanıt takibine eklendi (13 kampanya, 234 işletme).
 | 14 | Mersin Çizik Onarım | iletisim@mersincizikonarim.com | A |
 
 Yanıt takibine eklendi (14 kampanya, 248 işletme).
+
+### Dil kursları: demo kopyası (13 Kasım 2026)
+
+Şablon [mail-sablonu-dil.html](mail-sablonu-dil.html), SDM Dil Okulu örneğiyle doldurulup `merhaba@dijicozum.com` adresinden (Gmail web, Chrome) ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi; gönderilmiş klasöründe doğrulandı. Aday listesi: [sektor-dil.md](sektor-dil.md) (13 kurs, hepsi A).
