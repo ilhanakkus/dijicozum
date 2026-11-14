@@ -74,7 +74,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Salon} için küçük bi
 |---|---|---|---|---|
 | 1 | New You Güzellik Merkezi | newyou.guzellik@gmail.com | A | – |
 | 2 | Talin Güzellik Merkezi | info@talinguzellikmerkezi.com | A | – |
-| 3 | Kadıköy Güzellik Merkezi | info@kadikoyguzellikmerkezi.com | A | – |
+| 3 | Kadıköy Güzellik Merkezi | info@kadikoyguzellikmerkezi.com | A | 13 Kas: Teslim gecikiyor (geçici hata; Gmail ~2 gün yeniden deneyecek, kesin geri dönme değil) |
 | 4 | Mabel Güzellik | randevu@mabelguzelliksalonu.com | A | – |
 | 5 | Dermopark VIP | info@dermoparkvip.com | A | – |
 | 6 | Dore Güzellik | info@doreguzellikeskisehir.com | A | – |
@@ -101,7 +101,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük b
 | 6 | Borfiz | bilgi@borfiz.com.tr | A | – |
 | 7 | Nilüfer Fizyoterapi | info@niluferfizyoterapi.com | A | – |
 | 8 | Fizyovela | info@fizyovela.com | A | 12 Kas: Geri döndü (adres yok). Sitede ayrıca fizyovela@gmail.com yazıyor. |
-| 9 | FizyoSuite | bilgi@fizyosuite.com | A | – |
+| 9 | FizyoSuite | bilgi@fizyosuite.com | A | 13 Kas: Teslim gecikiyor (geçici hata; Gmail ~2 gün yeniden deneyecek, kesin geri dönme değil) |
 | 10 | Maltepe Fizik Tedavi | maltepefiziktedavi06@gmail.com | A | – |
 | 11 | Enerji Tıp Merkezi | bilgi@enerjitipmerkezi.com | A | – |
 | 12 | Fzt. Fatma Aslan | info@fizyoterapistfatmaaslan.com | A | – |
@@ -169,7 +169,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük b
 | 1 | Ata Estetik | info@ataestetik.com | A | – |
 | 2 | Ankara Lazer | ankaralazer@gmail.com | A | – |
 | 3 | Laserlab | iletisim@laserlab.tr | A | – |
-| 4 | Million Hair Clinic | info@millionhairclinic.com | A | – |
+| 4 | Million Hair Clinic | info@millionhairclinic.com | A | 13 Kas: Teslim gecikiyor (geçici hata; Gmail ~2 gün yeniden deneyecek, kesin geri dönme değil) |
 | 5 | Clinika Estetik | info@clinikaestetik.com | A | – |
 | 6 | Bakırköy Lazer | info@bakirkoylazer.com | A | – |
 | 7 | MediDerm | info@mediderm.com.tr | A | – |
@@ -292,7 +292,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: 
 | 19 | Nüans Dans ve Sanat Evi | info@nuansdans.com.tr | A | |
 | 20 | Eskişehir Danset | danseteskisehir26@gmail.com | A | |
 | 21 | Yıldız Dans Akademi | info@yildizdansakademi.com | B | |
-| 22 | Stüdyo Dans & Bale | info@studyodansbale.com | B | |
+| 22 | Stüdyo Dans & Bale | info@studyodansbale.com | B | 13 Kas: Teslim gecikiyor (geçici hata; Gmail ~2 gün yeniden deneyecek, kesin geri dönme değil) |
 | 23 | Max Dance Studio | maxdance@maxdance.com.tr | B | |
 
 ### Dalış okulları: demo kopyası (12 Kasım 2026)
@@ -435,20 +435,20 @@ Yanıt takibine eklendi (14 kampanya, 248 işletme).
 
 Şablon [mail-sablonu-dil.html](mail-sablonu-dil.html); `merhaba@dijicozum.com` adresinden Gmail web (tam ekran yazma, `to=` ile, Chrome) gönderildi, her biri tek alıcı, 13/13 gönderilmiş klasöründe doğrulandı. Konu: "{Kurs} için küçük bir fikir: ders randevuları WhatsApp'tan çıksın".
 
-| # | Kurs | Alıcı | Grup |
-|---|---|---|---|
-| 1 | SDM Dil Okulu | info@sdm.com.tr | A |
-| 2 | Yabancıdan Özel Ders | bilgi@yabancidanozelders.com | A |
-| 3 | Englishbox | bakirkoy@englishbox.com.tr | A |
-| 4 | İngiliz Akademi | info@ingilizakademi.com.tr | A |
-| 5 | Just English | info@justenglishtr.com | A |
-| 6 | Just For Speaking | info@justforspeaking.com | A |
-| 7 | TAÇ Yabancı Dil Kursu | info@kizilaytacdil.com | A |
-| 8 | IFB Türkiye | info@ifb-turkiye.com | A |
-| 9 | Bilişsel Akademi | info@bilisselakademi.com | A |
-| 10 | OYDEM Dil Okulları | oydem@oydem.com.tr | A |
-| 11 | Önder Dil Okulu | info@onderdil.com | A |
-| 12 | Language Zone | info@languagezone.com.tr | A |
-| 13 | British Express | antalyabritishexpress@gmail.com | A |
+| # | Kurs | Alıcı | Grup | Yanıt |
+|---|---|---|---|---|
+| 1 | SDM Dil Okulu | info@sdm.com.tr | A | – |
+| 2 | Yabancıdan Özel Ders | bilgi@yabancidanozelders.com | A | – |
+| 3 | Englishbox | bakirkoy@englishbox.com.tr | A | – |
+| 4 | İngiliz Akademi | info@ingilizakademi.com.tr | A | – |
+| 5 | Just English | info@justenglishtr.com | A | 13 Kas: Otomatik yanıt ("e-postanız ulaştı, ilgili departmana iletildi, dönüş sağlanacak"); gerçek yanıt bekleniyor |
+| 6 | Just For Speaking | info@justforspeaking.com | A | – |
+| 7 | TAÇ Yabancı Dil Kursu | info@kizilaytacdil.com | A | – |
+| 8 | IFB Türkiye | info@ifb-turkiye.com | A | – |
+| 9 | Bilişsel Akademi | info@bilisselakademi.com | A | – |
+| 10 | OYDEM Dil Okulları | oydem@oydem.com.tr | A | – |
+| 11 | Önder Dil Okulu | info@onderdil.com | A | – |
+| 12 | Language Zone | info@languagezone.com.tr | A | – |
+| 13 | British Express | antalyabritishexpress@gmail.com | A | – |
 
 Yanıt takibine eklendi (15 kampanya, 261 işletme).
