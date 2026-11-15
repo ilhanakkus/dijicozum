@@ -74,7 +74,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Salon} için küçük bi
 |---|---|---|---|---|
 | 1 | New You Güzellik Merkezi | newyou.guzellik@gmail.com | A | – |
 | 2 | Talin Güzellik Merkezi | info@talinguzellikmerkezi.com | A | – |
-| 3 | Kadıköy Güzellik Merkezi | info@kadikoyguzellikmerkezi.com | A | 13 Kas: Teslim gecikiyor (geçici hata; Gmail ~2 gün yeniden deneyecek, kesin geri dönme değil) |
+| 3 | Kadıköy Güzellik Merkezi | info@kadikoyguzellikmerkezi.com | A | 15 Kas: Geri döndü (kesin; alıcı sunucu "Domain not found", 13 Kas'tan beri gecikiyordu) |
 | 4 | Mabel Güzellik | randevu@mabelguzelliksalonu.com | A | – |
 | 5 | Dermopark VIP | info@dermoparkvip.com | A | – |
 | 6 | Dore Güzellik | info@doreguzellikeskisehir.com | A | – |
