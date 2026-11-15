@@ -101,7 +101,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük b
 | 6 | Borfiz | bilgi@borfiz.com.tr | A | – |
 | 7 | Nilüfer Fizyoterapi | info@niluferfizyoterapi.com | A | – |
 | 8 | Fizyovela | info@fizyovela.com | A | 12 Kas: Geri döndü (adres yok). Sitede ayrıca fizyovela@gmail.com yazıyor. |
-| 9 | FizyoSuite | bilgi@fizyosuite.com | A | 13 Kas: Teslim gecikiyor (geçici hata; Gmail ~2 gün yeniden deneyecek, kesin geri dönme değil) |
+| 9 | FizyoSuite | bilgi@fizyosuite.com | A | 15 Kas: Geri döndü (kesin; alıcı sunucu "Domain not found", 13 Kas'tan beri gecikiyordu) |
 | 10 | Maltepe Fizik Tedavi | maltepefiziktedavi06@gmail.com | A | – |
 | 11 | Enerji Tıp Merkezi | bilgi@enerjitipmerkezi.com | A | – |
 | 12 | Fzt. Fatma Aslan | info@fizyoterapistfatmaaslan.com | A | – |
