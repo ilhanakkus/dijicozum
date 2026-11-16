@@ -169,7 +169,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web). Konu: `{Merkez} için küçük b
 | 1 | Ata Estetik | info@ataestetik.com | A | – |
 | 2 | Ankara Lazer | ankaralazer@gmail.com | A | – |
 | 3 | Laserlab | iletisim@laserlab.tr | A | – |
-| 4 | Million Hair Clinic | info@millionhairclinic.com | A | 13 Kas: Teslim gecikiyor (geçici hata; Gmail ~2 gün yeniden deneyecek, kesin geri dönme değil) |
+| 4 | Million Hair Clinic | info@millionhairclinic.com | A | 15 Kas: Geri döndü (kesin; alıcı sunucu "Domain not found", 13 Kas'tan beri gecikiyordu) |
 | 5 | Clinika Estetik | info@clinikaestetik.com | A | – |
 | 6 | Bakırköy Lazer | info@bakirkoylazer.com | A | – |
 | 7 | MediDerm | info@mediderm.com.tr | A | – |
@@ -292,7 +292,7 @@ Gönderen: `merhaba@dijicozum.com` (Gmail web, uygulama içi tarayıcı). Konu: 
 | 19 | Nüans Dans ve Sanat Evi | info@nuansdans.com.tr | A | |
 | 20 | Eskişehir Danset | danseteskisehir26@gmail.com | A | |
 | 21 | Yıldız Dans Akademi | info@yildizdansakademi.com | B | |
-| 22 | Stüdyo Dans & Bale | info@studyodansbale.com | B | 13 Kas: Teslim gecikiyor (geçici hata; Gmail ~2 gün yeniden deneyecek, kesin geri dönme değil) |
+| 22 | Stüdyo Dans & Bale | info@studyodansbale.com | B | 15 Kas: Geri döndü (kesin; alıcı sunucu "Domain not found", 13 Kas'tan beri gecikiyordu) |
 | 23 | Max Dance Studio | maxdance@maxdance.com.tr | B | |
 
 ### Dalış okulları: demo kopyası (12 Kasım 2026)
