@@ -472,3 +472,7 @@ Yanıt takibine eklendi (15 kampanya, 261 işletme).
 ### Hatırlatma maili: demo kopyası (26.11.2026)
 
 [mail-sablonu-hatirlatma.html](mail-sablonu-hatirlatma.html) kullanıcının isteğiyle görselli: tek görsel, kısa metin, sonunda bir soru. SDM Dil Okulu örneğiyle doldurulup merhaba@'dan ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi. Asıl gönderim, her işletmenin ilk mail dizisinde "Yanıtla" ile yapılacak; günde en fazla 30–40 mail. Onay bekleniyor.
+
+### Hatırlatma kampanyası, 1. gün (26.11.2026)
+
+Kullanıcı onay verdi ("Gönder"). Gönderilen: 35/35, kuyruğun 1–35. satırları (diş, güzellik, fizyoterapinin ilk 4'ü). Hepsi ilk mailin dizisinde "Re:" yanıtı olarak, merhaba@'dan gitti; gönderilmiş klasöründe 35 dizi doğrulandı. Kuyruk: [hatirlatma-kuyruk.md](hatirlatma-kuyruk.md); kalan 220 işletme ~7 günde gönderilecek.
