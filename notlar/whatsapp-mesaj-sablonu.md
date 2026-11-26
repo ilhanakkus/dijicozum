@@ -39,3 +39,17 @@ Gönderen: 0545 157 93 11 (WhatsApp Business Web). Kuyruğun ilk 20 işletmesi s
 | Başakşehir Beauty | 0541 547 14 46 | B | gönderildi |
 
 İletilen: 18 mesaj (A 8, B 10). Sonuçlar 28.11.2026'da değerlendirilecek; ölçüt, otomatik olmayan yanıtlar ve A linkine gelen tıklamalar.
+
+## A/B deneyi: 2. tur (26.11.2026, 14:49–14:58)
+
+Kuyruğun 21–34. satırları gönderildi (14 mesaj, A 7 / B 7): Sevil Muradova (A), Lima Estetik (B), Evolusi (A), Ata Estetik (B, otomatik karşılama), Clinika Estetik (A), MediDerm (B), Dr. Beauty Laser (A), M Terapi (B), Maltepe Fizik Tedavi (A), Burcu Yanardağ Pilates (B), PiaForm (A), İyi Duy İşitme (B), Başkent Ses İşitme (A), Diyalog İşitme (B, otomatik karşılama). Başakşehir Beauty (1. tur) otomatik karşılama gönderdi.
+Bekleyen 6 işletme: Kalamış Psikoloji, Özne Psikoloji, İzmir Şans Psikoloji, Yenitepe Diş, Ataşehir Fizik Tedavi, Ulus Fizyoterapi.
+
+**İlk olumlu yanıt:** İyi Duy İşitme (B grubu) 14:57'de "olur" yazdı. 14:59'da demo linki gönderildi: randevu-isitme, kn=İyi Duy İşitme, utm_content=B.
+
+## Tıklama takibi
+
+`functions/demo/_middleware.js` (Cloudflare Pages Function) utm_source taşıyan her demo açılışını ntfy.sh/dijicozum-1d976faaf181 konusuna bildirir. Bildirimde işletme adı, demo, cihaz ve kaynak yer alır. Bu sayım çerez onayından bağımsızdır; önizleme botları (WhatsApp, Facebook vb.) sayılmaz.
+- Telefonda anlık bildirim: ntfy uygulamasında bu konuya abone olun.
+- Geçmiş: `curl -s "https://ntfy.sh/dijicozum-1d976faaf181/json?poll=1&since=12h"`. ntfy kayıtları 12 saat tutar.
+- 14:56'daki PiaForm bildirimi, bot filtresinden önce WhatsApp önizlemesinden geldi; tıklama sayılmaz.
