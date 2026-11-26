@@ -468,3 +468,7 @@ Yanıt takibine eklendi (15 kampanya, 261 işletme).
   - List-Unsubscribe başlığı yok.
 - Sonuç: Kimlik doğrulama sorunu yok, DNS'te değişiklik gerekmiyor. Yanıt alınamamasının sebebi büyük olasılıkla içerik ve kanal: görselli, tanıtım havasındaki mailler Gmail'de "Promosyonlar" sekmesine düşüyor, ayrıca soğuk mail yanıt oranı düşük.
 - Sonraki adım: görselsiz, kısa, düz metin hatırlatma maili; günde 30–40 gönderim; Instagram/WhatsApp kanalını denemek.
+
+### Hatırlatma maili: demo kopyası (26.11.2026)
+
+[mail-sablonu-hatirlatma.html](mail-sablonu-hatirlatma.html) kullanıcının isteğiyle görselli: tek görsel, kısa metin, sonunda bir soru. SDM Dil Okulu örneğiyle doldurulup merhaba@'dan ilhanakkus@gmail.com'a `[DEMO]` konusuyla gönderildi. Asıl gönderim, her işletmenin ilk mail dizisinde "Yanıtla" ile yapılacak; günde en fazla 30–40 mail. Onay bekleniyor.
