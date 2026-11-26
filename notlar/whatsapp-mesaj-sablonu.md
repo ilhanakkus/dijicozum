@@ -1,8 +1,8 @@
-# WhatsApp mesaj şablonu (kısa, onay bekliyor)
+# WhatsApp mesaj şablonu (kısa, samimi; onay bekliyor)
 
 ```
-Merhaba, {İşletme} için online randevu sistemi örneği hazırladım:
+Merhaba, kolay gelsin 🙂 Ben İlhan.
+{İşletme} için küçük bir online randevu sayfası hazırladım, bir bakar mısınız?
 https://dijicozum.com/demo/randevu-{demo}?kn={İşletme_URL}&utm_source=whatsapp
-Beğenirseniz ücretsiz kurarım. 5 dakika konuşabilir miyiz?
-İlhan · DijiÇözüm
+Hoşunuza giderse sizin için ücretsiz kurarım.
 ```
