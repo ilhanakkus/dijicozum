@@ -452,3 +452,19 @@ Yanıt takibine eklendi (14 kampanya, 248 işletme).
 | 13 | British Express | antalyabritishexpress@gmail.com | A | – |
 
 Yanıt takibine eklendi (15 kampanya, 261 işletme).
+
+## Teslim edilebilirlik testi (26.11.2026)
+
+261 maile hiç gerçek yanıt gelmeyince kontrol edildi.
+
+- Gmail "farklı gönder" ayarı merhaba@ için zaten smtp.turkticaret.net:587 (TLS) kullanıyor.
+- mail-tester.com sonucu **8.9/10** (dil şablonunun sade hali):
+  - SPF pass (31.186.18.74, turkticaret)
+  - DKIM pass (selector `mail`, d=dijicozum.com)
+  - DMARC pass (p=none)
+  - Kara listede değil, kırık link yok.
+- Puan kırılan yerler:
+  - HTML_IMAGE_ONLY_24 (+1.3): az metin, çok görsel.
+  - List-Unsubscribe başlığı yok.
+- Sonuç: Kimlik doğrulama sorunu yok, DNS'te değişiklik gerekmiyor. Yanıt alınamamasının sebebi büyük olasılıkla içerik ve kanal: görselli, tanıtım havasındaki mailler Gmail'de "Promosyonlar" sekmesine düşüyor, ayrıca soğuk mail yanıt oranı düşük.
+- Sonraki adım: görselsiz, kısa, düz metin hatırlatma maili; günde 30–40 gönderim; Instagram/WhatsApp kanalını denemek.
