@@ -62,3 +62,9 @@ Kuyruğun 41–54. satırları: 13 mesaj iletildi (A 7 / B 6). İletilenler: Fiz
 - Bekleyen 6 işletme: Duyses İşitme, Sesplus İşitme, Antalya İşitme Cihazları Merkezi, Uzman İşitme Merkezi, Teta Ses, Neva İşitme.
 
 Günün toplamı: 51 mesaj iletildi (A 25, B 26).
+
+## 26.11.2026 akşam: WhatsApp kısıtlaması
+
+Kullanıcının bildirdiğine göre WhatsApp numarayı kısıtladı. Toplu gönderim durduruldu; kısıtlama kalkana kadar yeni soğuk mesaj gönderilmeyecek.
+
+**Olumlu yanıt:** Akdeniz Deva Fizyoterapi (Antalya, 0552 750 71 71, B grubu) "olabilir" yazdı. Yanıtı kullanıcı kendisi gönderecek; demo linki: randevu-fizyoterapi, kn=Akdeniz Deva, utm_content=B.
