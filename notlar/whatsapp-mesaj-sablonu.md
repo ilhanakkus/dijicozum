@@ -43,7 +43,7 @@ Gönderen: 0545 157 93 11 (WhatsApp Business Web). Kuyruğun ilk 20 işletmesi s
 ## A/B deneyi: 2. tur (26.11.2026, 14:49–14:58)
 
 Kuyruğun 21–34. satırları gönderildi (14 mesaj, A 7 / B 7): Sevil Muradova (A), Lima Estetik (B), Evolusi (A), Ata Estetik (B, otomatik karşılama), Clinika Estetik (A), MediDerm (B), Dr. Beauty Laser (A), M Terapi (B), Maltepe Fizik Tedavi (A), Burcu Yanardağ Pilates (B), PiaForm (A), İyi Duy İşitme (B), Başkent Ses İşitme (A), Diyalog İşitme (B, otomatik karşılama). Başakşehir Beauty (1. tur) otomatik karşılama gönderdi.
-Bekleyen 6 işletme: Kalamış Psikoloji, Özne Psikoloji, İzmir Şans Psikoloji, Yenitepe Diş, Ataşehir Fizik Tedavi, Ulus Fizyoterapi.
+15:00–15:02'de kalan 6 işletmeye de gönderildi: Kalamış Psikoloji (A), Özne Psikoloji (B), İzmir Şans Psikoloji (A), Yenitepe Diş (B), Ataşehir Fizik Tedavi (A, otomatik karşılama), Ulus Fizyoterapi (B). Kuyruğun ilk 40 satırı bitti. Toplam 38 mesaj iletildi (A 18, B 20).
 
 **İlk olumlu yanıt:** İyi Duy İşitme (B grubu) 14:57'de "olur" yazdı. 14:59'da demo linki gönderildi: randevu-isitme, kn=İyi Duy İşitme, utm_content=B.
 
