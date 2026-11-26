@@ -53,3 +53,12 @@ Kuyruğun 21–34. satırları gönderildi (14 mesaj, A 7 / B 7): Sevil Muradova
 - Telefonda anlık bildirim: ntfy uygulamasında bu konuya abone olun.
 - Geçmiş: `curl -s "https://ntfy.sh/dijicozum-1d976faaf181/json?poll=1&since=12h"`. ntfy kayıtları 12 saat tutar.
 - 14:56'daki PiaForm bildirimi, bot filtresinden önce WhatsApp önizlemesinden geldi; tıklama sayılmaz.
+
+## 3. tur (26.11.2026, 15:10–15:30)
+
+Kuyruğun 41–54. satırları: 13 mesaj iletildi (A 7 / B 6). İletilenler: Fizyonef (A), Enerji Tıp Merkezi (B), Fzt. Fatma Aslan (A), Akdeniz Deva (B), Yusuf Onkol Fizik Tedavi (A), Terapilates (B), Zeo Pilates (A), Naura Pilates (B), Gen Pilates (A), Plus Pilates (B), Beşiktaş Stüdyo (A), Aqua Pilates (B), Ankara Pilates (A).
+- Aslı Eralp Lazer ve Güzellik: numara WhatsApp kullanmıyor.
+- Duyses İşitme gönderilirken WhatsApp Web oturumu kapandı ve QR istedi. Gönderim durduruldu.
+- Bekleyen 6 işletme: Duyses İşitme, Sesplus İşitme, Antalya İşitme Cihazları Merkezi, Uzman İşitme Merkezi, Teta Ses, Neva İşitme.
+
+Günün toplamı: 51 mesaj iletildi (A 25, B 26).
