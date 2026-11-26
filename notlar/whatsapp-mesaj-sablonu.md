@@ -1,14 +1,8 @@
-# WhatsApp mesaj şablonu (onay bekliyor)
-
-Düz metin, tek mesaj, tek link. Link önizlemesi demo ekranını gösterir.
+# WhatsApp mesaj şablonu (kısa, onay bekliyor)
 
 ```
-Merhaba, ben İlhan (DijiÇözüm). Geçen hafta {İşletme} için hazırladığım online randevu örneğini mail ile göndermiştim, buradan da paylaşayım:
+Merhaba, {İşletme} için online randevu sistemi örneği hazırladım:
 https://dijicozum.com/demo/randevu-{demo}?kn={İşletme_URL}&utm_source=whatsapp
-
-{Kişi} boş saati görüp randevusunu kendisi alıyor; WhatsApp'taki "ne zaman müsaitsiniz?" yazışmaları azalıyor. Kurulumu ücretsiz yapıyorum.
-
-İlginizi çekerse kısaca konuşalım. Çekmezse "hayır" yazmanız yeterli, tekrar yazmam.
+Beğenirseniz ücretsiz kurarım. 5 dakika konuşabilir miyiz?
+İlhan · DijiÇözüm
 ```
-
-{Kişi} cümle başında büyük harfle yazılır: Hastalarınız, Müşterileriniz, Danışanlarınız, Üyeleriniz, Öğrencileriniz.
