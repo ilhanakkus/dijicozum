@@ -68,3 +68,11 @@ Günün toplamı: 51 mesaj iletildi (A 25, B 26).
 Kullanıcının bildirdiğine göre WhatsApp numarayı kısıtladı. Toplu gönderim durduruldu; kısıtlama kalkana kadar yeni soğuk mesaj gönderilmeyecek.
 
 **Olumlu yanıt:** Akdeniz Deva Fizyoterapi (Antalya, 0552 750 71 71, B grubu) "olabilir" yazdı. Yanıtı kullanıcı kendisi gönderecek; demo linki: randevu-fizyoterapi, kn=Akdeniz Deva, utm_content=B.
+
+## 27.11.2026: 4. tur (yavaş tempo, kısıtlama sonrası)
+
+Kullanıcı numarayı yeniden bağladı. Güvenli tempo: günde en fazla 8 mesaj, yalnızca B metni (linksiz), mesajlar arası yaklaşık 90 sn, her gönderimde kısıtlama uyarısı kontrolü.
+İletilenler (8, hepsi B): Sesplus İşitme, Antalya İşitme Cihazları Merkezi, Uzman İşitme Merkezi, Teta Ses, Neva İşitme, Ataşehir Psikoloji, Renas Psikoloji, Kilya Psikoloji (otomatik yanıt geldi).
+- Duyses İşitme: 26.11'deki mesaj aslında iletilmiş (otomatik yanıt geldi), tekrar gönderilmedi.
+- Uyarı ya da kısıtlama görülmedi.
+- Sıradaki: kuyruk #64'ten devam.
