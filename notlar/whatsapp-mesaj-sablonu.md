@@ -76,3 +76,41 @@ Kullanıcı numarayı yeniden bağladı. Güvenli tempo: günde en fazla 8 mesaj
 - Duyses İşitme: 26.11'deki mesaj aslında iletilmiş (otomatik yanıt geldi), tekrar gönderilmedi.
 - Uyarı ya da kısıtlama görülmedi.
 - Sıradaki: kuyruk #64'ten devam.
+
+## A/B deneyi: sonuç (28.11.2026)
+
+1. turdaki 18 iletilen mesajın sohbetleri 28.11.2026'da WhatsApp Web'de okundu (yalnızca okuma, hiçbir mesaj gönderilmedi).
+
+| İşletme | Grup | Sonuç |
+|---|---|---|
+| New You Güzellik Merkezi | A | yanıt yok |
+| Ankara Lazer | A | yanıt yok |
+| ÖzbuDent | A | yanıt yok |
+| Dentsahil | A | yanıt yok |
+| İzmir Dental Klinik | A | yanıt yok |
+| DentLeon | A | otomatik karşılama (17:28, "bizi tercih ettiğiniz için teşekkür ederiz, size nasıl yardımcı olabiliriz") |
+| Talin Güzellik Merkezi | A | otomatik karşılama |
+| Mediplast Güzellik Merkezi | A | yanıt yok (sohbet boş görünüyor, mesaj DentRoyal gibi görünmüyor olabilir) |
+| Tülay Kalmaz Beauty Center | B | yanıt yok |
+| Mithatpaşa Dent | B | yanıt yok |
+| Eyrice Diş | B | otomatik karşılama |
+| DentisLife | B | otomatik karşılama (2 mesaj) |
+| DentAtaşehir | B | gerçek yanıt: "Teşekkürler" (nazik ret) |
+| Evrensel Diş | B | yanıt yok |
+| OPC Klinik | B | yanıt yok |
+| Mabel Güzellik | B | otomatik karşılama |
+| Dore Güzellik | B | yanıt yok |
+| Başakşehir Beauty | B | otomatik karşılama (Dr. Nadir Harmankaya kliniği) |
+
+| | A (link ile) | B (soru, link yok) |
+|---|---|---|
+| Gerçek yanıt | 0 / 8 (%0) | 1 / 10 (%10) |
+| İlgili yanıt | 0 | 0 |
+| Otomatik karşılama | 2 | 4 |
+| "İstemiyorum / çıkar" | 0 | 0 |
+
+- 1. turda ilgilenen işletme çıkmadı. Tek gerçek yanıt DentAtaşehir'in "Teşekkürler"i; ek yanıt gerekmiyor.
+- Sonraki turlardaki iki olumlu yanıt da B metnine geldi: İyi Duy İşitme ("olur", 26.11) ve Akdeniz Deva Fizyoterapi ("olabilir", 26.11). A metnine hiçbir turda gerçek yanıt gelmedi.
+- A linkine gelen tıklamalar ölçülemedi: ntfy kayıtları 12 saat tutuyor, 26.11 tıklamaları silinmiş.
+- **Karar önerisi:** Kuyruğun kalanına B metniyle ("Randevuları hâlâ WhatsApp'tan mı alıyorsunuz? … incelemek ister misiniz?") devam edilsin, linki yalnızca olumlu yanıt verenlere gönderilsin. Bu, kısıtlama sonrası belirlenen yavaş tempoyla da uyumlu (linksiz mesaj spam sayılma riskini azaltır).
+- Örnek çok küçük (18 mesaj, en fazla 1 gerçek yanıt); fark istatistiksel olarak anlamlı değil. Sonuç yön gösterir, kesin değil.
